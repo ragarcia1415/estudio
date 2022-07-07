@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial DOM</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="images/arts/icono.png">
+</head>
+<body style="background-image: linear-gradient(to right, #5c5eb8, #5673c6, #5687d1, #5d9bd9, #6bade0, #70b6e5, #76c0e9, #7ec9ed, #77cdf1, #70d1f5, #68d5f8, #5fd9fb);">
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////
+                                 START SECTION 1 - THE NAVBAR SECTION  
+  /////////////////////////////////////////////////////////////////////////////////////////////-->
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+    <div class="container text-center">
+      <img src="images/DOM_LOGO.png" alt="logo image" style="margin: auto; width: 10%;">
+    </div>
+  </nav>
+
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                              START SECTION 2 - THE INTRO SECTION  
+  /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+  <section id="home" class="intro-section">
+    <div class="container">
+      <div class="row align-items-center text-white">
+        <!-- START THE CONTENT FOR THE INTRO  -->
+        <div class="col-md-6 intros text-start content-text">
+          <h1 class="display-2 text-center">
+            <span class="display-2--intro">¿Qué es DOM?</span>
+            <span class="display-2--description lh-base tex">
+              La creación del Document Object Model o DOM es una de las innovaciones que más ha influido en el desarrollo de las páginas web dinámicas y de las aplicaciones web más complejas.
+            </span>
+          </h1>
+          <a href="html/homePageParteI.html">
+            <button type="button" class="rounded-pill btn-rounded content-botton">Parte I
+              <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+          </a>
+
+          <a href="html/homePageParteII.html">
+            <button type="button" class="rounded-pill btn-rounded content-botton">Parte II
+              <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+          </a>
+
+          <br>
+          <i class="bi bi-facebook img-fluid" style="font-size: 200%; color: #fff; margin-right: 5%; margin-left: 30%;"></i>
+          <i class="bi bi-twitter img-fluid" style="font-size: 200%; color: #fff; margin-right: 5%;"></i>
+          <i class="bi bi-youtube img-fluid" style="font-size: 200%; color: #fff; margin-right: 5%;"></i>
+          <i class="bi bi-whatsapp img-fluid" style="font-size: 200%; color: #fff; margin-right: 5%;"></i>
+
+        </div>
+        <!-- START THE CONTENT FOR THE VIDEO -->
+        <div class="col-md-6 intros text-end">
+          <div class="video-box">
+            <img src="images/arts/DOM.png" alt="video illutration" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BACK TO TOP BUTTON  -->
+  <a href="#" class="shadow btn-primary rounded-circle back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+      <script src="assets/vendors/js/glightbox.min.js"></script>
+
+      <script type="text/javascript">
+        const lightbox = GLightbox({
+          'touchNavigation': true,
+          'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+          'type': 'video',
+          'source': 'youtube', //vimeo, youtube or local
+          'width': 900,
+          'autoPlayVideos': 'true',
+  });
+      
+  </script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    window.sr = ScrollReveal();
+    sr.reveal('.content-text', {
+      duration: 2000,
+      origin: 'bottom',
+      delay: 200
+    });
+    sr.reveal('.content-botton', {
+      duration: 2000,
+      origin: 'bottom',
+      delay: 400
+    });
+  </script>
+</body>
+</html>

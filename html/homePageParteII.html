@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DOM Avanzado</title>
+        <link rel="icon" type="image/png" href="../images/arts/icono.png">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/fontawesome.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/estilosHomePage.css">
+    </head>
+    <body>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////
+                                   START SECTION 1 - THE NAVBAR SECTION  
+    /////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="">
+            <img src="../images/DOM_LOGO.png" alt="logo image" style="width: 100px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link"  aria-current="page" href="#animaciones">Animaciones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#eventos">Eventos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#EL">Event Listener</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#node">Node</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#colecciones">Colecciones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#listaNodos">Lista de Nodos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#navegacion">Navegación</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    HEADER 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="intro-section" id="home">
+          <div class="container">
+            <div class="row align-items-center text-white">
+              <!-- START THE CONTENT FOR THE INTRO  -->
+              <div class="col-md-6 intros text-start content-botton">
+                <h1 class="display-2">
+                  <span class="display-2--intro">DOM AVANZADO</span>
+                  <span class="display-2--description lh-base">
+                    El DOM, acrónimo de Document Object Model, es la herramienta base para manipular cualquier página web.
+                  </span>
+                </h1>
+              </div>
+              <!-- START THE CONTENT FOR THE VIDEO -->
+              <div class="col-md-6 intros text-end">
+                <div class="video-box">
+                  <img src="../images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    ANIMACIONES
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services content-left" id="animaciones">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Animaciones DOM</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <p class="mt-5">Aprende a crear animaciones HTML usando JavaScript.</p>
+                    <hr>
+                    <h3>Una página web básica</h3>
+                    <p>Para demostrar cómo crear animaciones HTML con JavaScript, usaremos una página web simple:</p>
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoAnim" aria-controls="contenidoAnim" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a></button>
+
+                    <div class="collapse navbar-collapse " id="contenidoAnim" style="margin-top: 20px;">
+                        <h4><b>Ejemplo: </b></h4>
+                        <div class="cajaCodigo">
+                            <p style="color: #353535;">
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h1>My First JavaScript Animation&nbsp;&lt;/h1><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;div id="animation">My animation will go here&lt;/div><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                            </p>
+                        </div>
+                        <hr>
+                        <h3>Crear un contenedor de animación</h3>
+                        <p>Todas las animaciones deben ser relativas a un elemento contenedor.</p>
+                        <h4><b>Ejemplo: </b></h4>
+                        <div class="cajaCodigo">
+                            <p style="color: #353535;">
+                                &lt;div id ="container"><br>
+                                  &emsp;&lt;div id ="animate">My animation will go here&lt;/div> <br>
+                                &lt;/div>
+                            </p>
+                        </div>
+                        <hr>
+                        <h3>Dale estilo a los elementos</h3>
+                        <p>El elemento contenedor debe crearse con estilo = " <a style="color:#DC143C;">position: relative</a>".</p>
+                        <p>El elemento de animación debe crearse con estilo = " <a style="color:#DC143C;">position: absolute</a>".</p>
+
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!Doctype html><br>
+                                    &emsp;&lt;html><br>
+                                    &emsp;&emsp;&lt;style><br>
+                                    &emsp;&emsp;#container {<br>
+                                      &emsp;&emsp;&emsp;width: 400px;<br>
+                                      &emsp;&emsp;&emsp;height: 400px;<br>
+                                      &emsp;&emsp;&emsp;position: relative;<br>
+                                      &emsp;&emsp;&emsp;background: yellow;<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&emsp;#animate {<br>
+                                      &emsp;&emsp;&emsp;width: 50px;<br>
+                                      &emsp;&emsp;&emsp;height: 50px;<br>
+                                      &emsp;&emsp;&emsp;position: absolute;<br>
+                                      &emsp;&emsp;&emsp;background: red;<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/style><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>My First JavaScript Animation&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;div id="container"><br>
+                                    &emsp;&emsp;&emsp;&lt;div id="animate">&lt;/div><br>
+                                    &emsp;&emsp;&lt;/div><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!Doctype html>
+                                <html>
+                                <style>
+                                #container {
+                                  width: 100%;
+                                  height: 400PX;
+                                  position: relative;
+                                  background: yellow;
+                                }
+                                #animate {
+                                  width: 50px;
+                                  height: 50px;
+                                  position: absolute;
+                                  background: red;
+                                }
+                                </style>
+                                <body>
+
+                                <h2>My First JavaScript Animation</h2>
+
+                                <div id="container">
+                                <div id="animate"></div>
+                                </div>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Código de animación</h3>
+                        <p>
+                            Las animaciones de JavaScript se realizan mediante la programación de cambios graduales en el estilo de un elemento. <br><br>
+                            Los cambios son llamados por un temporizador. Cuando el intervalo del temporizador es pequeño, la animación parece continua. <br><br>
+
+                            El código básico es: <br>
+                        </p>
+                        <br>
+                        <h4><b>Ejemplo: </b></h4>
+                        <div class="cajaCodigo">
+                            <p style="color: #353535;">
+                                id = setInterval(frame, 5);<br><br>
+
+                                function frame() {<br>
+                                  &emsp;if (/* test for finished */) {<br>
+                                    &emsp;&emsp;clearInterval(id);<br>
+                                  &emsp;} else {<br>
+                                    &emsp;&emsp;/* code to change the element style */ <br>
+                                  &emsp;}<br>
+                                }
+                            </p>
+                        </div>
+                        <hr>
+                        <h3>Crear la animación completa usando JavaScript</h3>
+                                                <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &lt;style><br>
+                                    &emsp;&emsp;#container {<br>
+                                      &emsp;&emsp;&emsp;width: 400px;<br>
+                                      &emsp;&emsp;&emsp;height: 400px;<br>
+                                      &emsp;&emsp;&emsp;position: relative;<br>
+                                      &emsp;&emsp;&emsp;background: yellow;<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&emsp;#animate {<br>
+                                      &emsp;&emsp;&emsp;width: 50px;<br>
+                                      &emsp;&emsp;&emsp;height: 50px;<br>
+                                      &emsp;&emsp;&emsp;position: absolute;<br>
+                                      &emsp;&emsp;&emsp;background-color: red;<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&lt;/style><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&lt;p><br>
+                                    &emsp;&emsp;&lt;button onclick="myMove()">Click Me&lt;/<br>button><br>
+                                    &emsp;&lt;/p> <br>
+                                    <br>
+                                    &emsp;&lt;div id ="container"><br>
+                                      &emsp;&emsp;&lt;div id ="animate">&lt;/div><br>
+                                    &emsp;&lt;/div><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;function myMove() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;let id = null;<br>
+                                      &emsp;&emsp;&emsp;&emsp;const elem = document.getElementById("animate"); <br>  
+                                      &emsp;&emsp;&emsp;&emsp;let pos = 0;<br>
+                                      &emsp;&emsp;&emsp;&emsp;clearInterval(id);<br>
+                                      &emsp;&emsp;&emsp;&emsp;id = setInterval(frame, 5);<br>
+                                      &emsp;&emsp;&emsp;&emsp;function frame() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;if (pos == 350) {<br>
+                                      &emsp;&emsp;&emsp;&emsp;&emsp;clearInterval(id);<br>
+                                      &emsp;&emsp;&emsp;&emsp;} else {<br>
+                                          &emsp;&emsp;&emsp;&emsp;&emsp;pos++; <br>
+                                          &emsp;&emsp;&emsp;&emsp;&emsp;elem.style.top = pos + "px"; <br>
+                                          &emsp;&emsp;&emsp;&emsp;&emsp;elem.style.left = pos + "px"; <br>
+                                        &emsp;&emsp;&emsp;&emsp;}<br>
+                                      &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <style>
+                                #containerDos {
+                                  width: 400px;
+                                  height: 400px;
+                                  position: relative;
+                                  background: yellow;
+                                }
+                                #animateDos{
+                                  width: 50px;
+                                  height: 50px;
+                                  position: absolute;
+                                  background-color: red;
+                                }
+                                </style>
+                                <body>
+
+                                <p><button onclick="animation()">Click Me</button></p> 
+
+                                <div id ="containerDos">
+                                  <div id ="animateDos"></div>
+                                </div>
+
+                                <script>
+                                function animation() {
+                                  let id = null;
+                                  const elem = document.getElementById("animateDos");   
+                                  let pos = 0;
+                                  clearInterval(id);
+                                  id = setInterval(frame, 5);
+                                  function frame() {
+                                    if (pos == 350) {
+                                      clearInterval(id);
+                                    } else {
+                                      pos++; 
+                                      elem.style.top = pos + "px"; 
+                                      elem.style.left = pos + "px"; 
+                                    }
+                                  }
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+               </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    EVENTOS
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services get-started" id="eventos">
+          <div class="container content-right">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Eventos DOM</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3 content-right">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <p>HTML DOM permite que JavaScript reaccione a eventos HTML:</p>
+                    <div class="cajaCodigo">
+                        <p style="color: #353535;">
+                            <!DOCTYPE html>
+                            <html>
+                            <body>
+
+                            <div class="row mx-auto" style="width: 400px;">
+                                <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                                style="background-color:#D94A38;width:120px;height:80px; padding:10px; margin-right: 25px; margin-left: 50px;">
+                                    <p>Mouse Over Me</p>
+                                </div>
+
+                                <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+                                style="background-color:#D94A38;width:120px;height:80px;padding:10px;">
+                                    <p>Click Me</p>
+                                </div>
+                            </div>
+
+                            <script>
+                                function mOver(obj) {
+                                  obj.innerHTML = "Thank You"
+                                }
+
+                                function mOut(obj) {
+                                  obj.innerHTML = "Mouse Over Me"
+                                }
+                            </script>
+
+
+
+                            <script>
+                            function mDown(obj) {
+                              obj.style.backgroundColor = "#1ec5e5";
+                              obj.innerHTML = "Release Me";
+                            }
+
+                            function mUp(obj) {
+                              obj.style.backgroundColor="#D94A38";
+                              obj.innerHTML="Thank You";
+                            }
+                            </script>
+
+                            </body>
+                            </html> 
+                        </p>
+                    </div>
+                    <hr>
+                    <h3>Reaccionar a los eventos</h3>
+                    <p class="mt-5">
+                        Un JavaScript se puede ejecutar cuando ocurre un evento, como cuando un usuario hace clic en un elemento HTML. <br>
+                        <br>
+                        Para ejecutar código cuando un usuario hace clic en un elemento, agregue código JavaScript a un atributo de evento HTML: <br>
+                    </p>
+                    <div class="cajaCodigo">
+                        <p style="color: #353535;">
+                            <i>onclick=JavaScript</i>
+                        </p>
+                    </div>
+
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoEvent" aria-controls="contenidoEvent" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                    </button>
+                    <div class="collapse navbar-collapse " id="contenidoEvent" style="margin-top: 20px;">
+                        <h4>Ejemplos de eventos HTML</h4>
+                        <ul>
+                            <li>Cuando un usuario hace clic con el mouse</li>
+                            <li>Cuando una página web ha cargado</li>
+                            <li>Cuando se ha cargado una imagen</li>
+                            <li>Cuando el mouse se mueve sobre un elemento</li>
+                            <li>Cuando se cambia un campo de entrada</li>
+                            <li>Cuando se envía un formulario HTML</li>
+                            <li>Cuando un usuario pulsa una tecla</li>
+                        </ul>
+                        <p>En este ejemplo, el contenido del <a style="color: #DC143C;"> &lt;h1> </a> elemento cambia cuando un usuario hace clic en él:</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML Events&lt;/h2><br>
+                                    &emsp;&emsp;&lt;h2 onclick="this.innerHTML='Ooops!'">Click on this text!&lt;/h2><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML Events</h2>
+                                <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <hr>
+                        <p>En este ejemplo, se llama a una función desde el controlador de eventos:</p>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML Events&lt;/h2><br>
+                                    &emsp;&emsp;&lt;h2 onclick="changeText(this)">Click on this text!&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;function changeText(id) {<br>
+                                    &emsp;&emsp;&emsp;  id.innerHTML = "Ooops!";<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML Events</h2>
+                                <h2 onclick="changeText(this)">Click on this text!</h2>
+
+                                <script>
+                                function changeText(id) {
+                                  id.innerHTML = "Ooops!";
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Atributos de eventos HTML</h3>
+                        <p>Para asignar eventos a elementos HTML, puede usar atributos de eventos.</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <p>Asigne un evento onclick a un elemento de botón:</p>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML Events&lt;/h2><br>
+                                    &emsp;&emsp;&lt;p>Click the button to display the date.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button onclick="displayDate()">The time is?&lt;/button><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;function displayDate() {<br>
+                                      &emsp;&emsp;&emsp;document.getElementById("demo").innerHTML = Date();<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p id="demo">&lt;/p><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html> <br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML Events</h2>
+                                <p>Click the button to display the date.</p>
+
+                                <button onclick="displayDateT()">The time is?</button>
+
+                                <script>
+                                function displayDateT() {
+                                  document.getElementById("demoT").innerHTML = Date();
+                                }
+                                </script>
+
+                                <p id="demoT"></p>
+
+                                </body>
+                                </html> 
+                            </div>
+                        </div>
+                        <p>En el ejemplo anterior, se ejecutará una función nombrada <a style="color: #DC143C;"> displayDate </a> cuando se haga clic en el botón.</p>
+                        <hr>
+                        <h3>Asignar eventos utilizando el HTML DOM</h3>
+                        <p>El HTML DOM le permite asignar eventos a elementos HTML usando JavaScript:</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <p>Asigne un evento onclick a un elemento de botón:</p>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html> <br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML Events&lt;/h2><br>
+                                    &emsp;&emsp;&lt;p>Click "Try it" to execute the displayDate() function.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button id="myBtn">Try it&lt;/button><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p id="demo">&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;document.getElementById("myBtn").onclick = displayDate;<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function displayDate() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML = Date();<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br> 
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML Events</h2>
+                                <p>Click "Try it" to execute the displayDate() function.</p>
+
+                                <button id="myBtnUno">Try it</button>
+
+                                <p id="demox"></p>
+
+                                <script>
+                                document.getElementById("myBtnUno").onclick = displayDate;
+
+                                function displayDate() {
+                                  document.getElementById("demox").innerHTML = Date();
+                                }
+                                </script>
+
+                                </body>
+                                </html> 
+
+                            </div>
+                        </div>
+                        <p>En el ejemplo anterior, <a style="color: #DC143C;"> displayDatese </a> asigna una función con nombre a un elemento HTML con la extensión <a style="color: #DC143C;"> id="myBtn"</a>. <br>
+                        La función se ejecutará cuando se haga clic en el botón.</p>
+                        <hr>
+                        <h3>Los eventos onload y onunload</h3>
+                        <p>
+                            Los eventos <a style="color: #DC143C;"> onload </a> y <a style="color: #DC143C;"> onunloadse </a> activan cuando el usuario entra o sale de la página. <br><br>
+
+                            El <a style="color: #DC143C;">onload</a> evento se puede utilizar para comprobar el tipo de navegador y la versión del navegador del visitante, y cargar la versión adecuada de la página web en función de la información.<br><br>
+
+                            Los eventos <a style="color: #DC143C;"> onloady </a> y <a style="color: #DC143C;"> onunload </a> se pueden utilizar para tratar con las cookies.
+                        </p>  
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body onload="checkCookies()"><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML Events&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p id="demo">&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;function checkCookies() {<br>
+                                      &emsp;&emsp;&emsp;var text = "";<br>
+                                      &emsp;&emsp;&emsp;if (navigator.cookieEnabled == true) {<br>
+                                        &emsp;&emsp;&emsp;&emsp;text = "Cookies are enabled.";<br>
+                                      &emsp;&emsp;&emsp;} else {<br>
+                                        &emsp;&emsp;&emsp;&emsp;text = "Cookies are not enabled.";<br>
+                                      &emsp;&emsp;&emsp;}<br>
+                                      &emsp;&emsp;&emsp;document.getElementById("demo").innerHTML = text;<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body onload="checkCookies()">
+
+                                <h2>JavaScript HTML Events</h2>
+
+                                <p id="demoss"></p>
+
+                                <script>
+                                function checkCookies() {
+                                  var text = "";
+                                  if (navigator.cookieEnabled == true) {
+                                    text = "Cookies are enabled.";
+                                  } else {
+                                    text = "Cookies are not enabled.";
+                                  }
+                                  document.getElementById("demoss").innerHTML = text;
+                                }
+                                </script>
+
+                                </body>
+                                </html> 
+ 
+                            </div>
+                        </div>  
+                        <hr>
+                        <h3>El evento onchange</h3>
+                        <p>El <a style="color: #DC143C;"> onchange </a> evento se usa a menudo en combinación con la validación de campos de entrada. <br><br>
+                        A continuación se muestra un ejemplo de cómo utilizar onchange. La <a style="color: #DC143C;"> upperCase() </a> función se llamará cuando un usuario cambie el contenido de un campo de entrada.</p> 
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML Events&lt;/h2><br>
+                                    &emsp;&emsp;Enter your name: <br>
+                                    &emsp;&emsp;&lt;input type="text" id="fname" onchange="upperCase()"><br>
+                                    &emsp;&emsp;&lt;p>When you leave the input field, a function is triggered which transforms the input text to upper case.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;function upperCase() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;const x = document.getElementById("fname");<br>
+                                      &emsp;&emsp;&emsp;&emsp;x.value = x.value.toUpperCase();<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML Events</h2>
+                                Enter your name: <input type="text" id="fname" onchange="upperCase()">
+                                <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+                                <script>
+                                function upperCase() {
+                                  const x = document.getElementById("fname");
+                                  x.value = x.value.toUpperCase();
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Los eventos onmouseover y onmouseout</h3>
+                        <p>Los eventos <a style="color: #DC143C;"> onmouseover </a> y <a style="color: #DC143C;"> onmouseout </a> se pueden usar para activar una función cuando el usuario pasa el mouse sobre o fuera de un elemento HTML:</p>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;"><br>
+                                    &emsp;&emsp;Mouse Over Me<br>
+                                    &emsp;&emsp;&lt;/div><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;function mOver(obj) {<br>
+                                      &emsp;&emsp;&emsp;obj.innerHTML = "Thank You"<br>
+                                    &emsp;&emsp;}<br>
+                                    <br>
+                                    &emsp;&emsp;function mOut(obj) {<br>
+                                      &emsp;&emsp;&emsp;obj.innerHTML = "Mouse Over Me"<br>
+                                    &emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html> <br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                                style="background-color:#D94A38;width:100%;height:40px;padding:15px;">
+                                Mouse Over Me</div>
+
+                                <script>
+                                function mOver(obj) {
+                                  obj.innerHTML = "Thank You"
+                                }
+
+                                function mOut(obj) {
+                                  obj.innerHTML = "Mouse Over Me"
+                                }
+                                </script>
+
+                                </body>
+                                </html> 
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Los eventos onmousedown, onmouseup y onclick</h3>
+                        <p>Los eventos <a style="color: #DC143C;"> onmousedown </a>, <a style="color: #DC143C;"> onmouseup </a> y <a style="color: #DC143C;">onclick </a> son todos partes de un clic del mouse. Primero, cuando se hace clic en un botón del mouse, se activa el evento onmousedown, luego, cuando se suelta el botón del mouse, se activa el evento onmouseup, finalmente, cuando se completa el clic del mouse, se activa el evento onclick.</p>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;div onmousedown="mDown(this)" onmouseup="mUp(this)"
+                                    style="background-color:#D94A38;width:90px;height:20px;padding:40px;"><br>
+                                    &emsp;&emsp;Click Me <br>
+                                    &emsp;&emsp;&lt;/div><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;function mDown(obj) {<br>
+                                      &emsp;&emsp;&emsp;&emsp;obj.style.backgroundColor = "#1ec5e5";<br>
+                                      &emsp;&emsp;&emsp;&emsp;obj.innerHTML = "Release Me";<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function mUp(obj) {<br>
+                                      &emsp;&emsp;&emsp;&emsp;obj.style.backgroundColor="#D94A38";<br>
+                                      &emsp;&emsp;&emsp;&emsp;obj.innerHTML="Thank You";<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                    
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+                                style="background-color:#D94A38;width:100%;height:40px;padding:15px;">
+                                Click Me</div>
+
+                                <script>
+                                function mDown(obj) {
+                                  obj.style.backgroundColor = "#1ec5e5";
+                                  obj.innerHTML = "Release Me";
+                                }
+
+                                function mUp(obj) {
+                                  obj.style.backgroundColor="#D94A38";
+                                  obj.innerHTML="Thank You";
+                                }
+                                </script>
+
+                                </body>
+                                </html> 
+                            </div>
+                        </div>
+                        <hr>
+                        <h4><b>Ejemplo</b></h4>
+                        <p>
+                            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmousedown">onmousedown y onmouseup</a><br>
+                            Cambiar una imagen cuando un usuario mantiene presionado el botón del <mouse class="br"></mouse>
+                            <br>
+                            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onload">onload</a><br>
+                            Muestra un cuadro de alerta cuando la página ha terminado de cargarse. <br>
+
+                            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onfocus">onfocus</a><br>
+                            Cambia el color de fondo de un campo de entrada cuando recibe el foco. <br>
+
+                            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onmouse">Mouse Events</a><br>
+                            Cambia el color de un elemento cuando el cursor se mueve sobre él.
+                        </p>
+                        <hr>
+                        <h3>Referencia de objeto de evento HTML DOM</h3>
+                        <p>Para obtener una lista de todos los eventos DOM de HTML, consulte nuestra <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">referencia completa de objetos de eventos DOM de HTML </a>.</p>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    EVENT LISTENER DOM
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services content-left" id="EL">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">EventListener DOM</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <hr>
+                    <h3>El método addEventListener()</h3>
+                    <h4><b>Ejemplo</b></h4>
+                    <p>Agregue un detector de eventos que se active cuando un usuario haga clic en un botón:</p>
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoEL" aria-controls="contenidoEL" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                    </button>
+                    <div class="collapse navbar-collapse " id="contenidoEL" style="margin-top: 20px;">
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>This example uses the addEventListener() method to attach a click event to a button.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button id="myBtn">Try it</button><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p id="demo">&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;document.getElementById("myBtn").addEventListener("click", displayDate);<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function displayDate() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML = Date();<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    <br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br> 
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+                                <button id="myBtnM">Try it</button>
+
+                                <p id="demoM"></p>
+
+                                <script>
+                                document.getElementById("myBtnM").addEventListener("click", displayDate);
+
+                                function displayDate() {
+                                  document.getElementById("demoM").innerHTML = Date();
+                                }
+                                </script>
+
+                                </body> 
+                            </div>
+                        </div> 
+                        <p>
+                            El <a style="color: #DC143C;"> addEventListener() </a> método adjunta un controlador de eventos al elemento especificado. <br><br>
+
+                            El  <a style="color: #DC143C;">addEventListener()</a> método adjunta un controlador de eventos a un elemento sin sobrescribir los controladores de eventos existentes. <br><br>
+
+                            Puede agregar muchos controladores de eventos a un elemento. <br><br>
+
+                            Puede agregar muchos controladores de eventos del mismo tipo a un elemento, es decir, dos eventos de "clic". <br><br>
+
+                            Puede agregar detectores de eventos a cualquier objeto DOM, no solo elementos HTML. es decir, el objeto ventana. <br><br>
+
+                            El <a style="color: #DC143C;"> addEventListener() </a> método facilita el control de cómo reacciona el evento al burbujeo. <br><br>
+
+                            Al usar el <a style="color: #DC143C;"> addEventListener() </a>método, el JavaScript se separa del marcado HTML, para una mejor legibilidad y le permite agregar detectores de eventos incluso cuando no controla el marcado HTML. <br><br>
+
+                            Puede eliminar fácilmente un detector de eventos utilizando el <a style="color: #DC143C;"> removeEventListener() </a>método. 
+                        </p>
+                        <hr>  
+                        <h2>Sintaxis</h2>
+                        <div class="cajaCodigo">
+                            <p><i>element.addEventListener(event, function, useCapture);</i></p>
+                        </div>
+                        <p>
+                            El primer parámetro es el tipo de evento (como " <a style="color: #DC143C;">click</a>" o " <a style="color: #DC143C;">mousedown</a>" o cualquier otro <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">evento HTML DOM</a>).<br>
+                            <br>
+                            El segundo parámetro es la función que queremos llamar cuando ocurra el evento.<br>
+                            <br>
+                            El tercer parámetro es un valor booleano que especifica si se debe usar el burbujeo de eventos o la captura de eventos. Este parámetro es opcional.
+                        </p>
+                        <hr>
+                        <h3>Agregar un controlador de eventos a un elemento</h3>
+                        <h4><b>Ejemplo</b></h4>
+                        <p>Alerta "¡Hola mundo!" cuando el usuario hace clic en un elemento:</p> 
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>This example uses the addEventListener() method to attach a click event to a button.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button id="myBtn">Try it&lt;/button><br>    
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;document.getElementById("myBtn").addEventListener("click", function() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert("Hello World!");<br>
+                                    &emsp;&emsp;&emsp;});<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                    <br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+                                <button id="myBtnN">Try it</button>
+
+                                <script>
+                                document.getElementById("myBtnN").addEventListener("click", function() {
+                                  alert("Hello World!");
+                                });
+                                </script>
+
+                                </body>
+                                </html>
+                                </body> 
+                            </div>
+                        </div>        
+                        <p>También puede hacer referencia a una función externa "nombrada":</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <p>Alerta "¡Hola mundo!" cuando el usuario hace clic en un elemento:</p>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>This example uses the addEventListener() method to execute a function when a user clicks on a button.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button id="myBtn">Try it&lt;/button><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;document.getElementById("myBtn").addEventListener("click", myFunction);<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function myFunction() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert ("Hello World!");<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <p>This example uses the addEventListener() method to execute a function when a user clicks on a button.</p>
+
+                                <button id="myBtnB">Try it</button>
+
+                                <script>
+                                document.getElementById("myBtnB").addEventListener("click", myFunctionBB);
+
+                                function myFunctionBB() {
+                                  alert ("Hello World!");
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Agregue muchos controladores de eventos al mismo elemento</h3>
+                        <p>El <a style="color: #DC143C;"> addEventListener() </a> método le permite agregar muchos eventos al mismo elemento, sin sobrescribir los eventos existentes:</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>This example uses the addEventListener() method to add two click events to the same button.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button id="myBtn">Try it&lt;/button><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;var x = document.getElementById("myBtn");<br>
+                                    &emsp;&emsp;&emsp;x.addEventListener("click", myFunction);<br>
+                                    &emsp;&emsp;&emsp;x.addEventListener("click", someOtherFunction);<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function myFunction() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert ("Hello World!");<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function someOtherFunction() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert ("This function was also executed!");<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <p>This example uses the addEventListener() method to add two click events to the same button.</p>
+
+                                <button id="myBtn">Try it</button>
+
+                                <script>
+                                var x = document.getElementById("myBtn");
+                                x.addEventListener("click", myFunction);
+                                x.addEventListener("click", someOtherFunction);
+
+                                function myFunction() {
+                                  alert ("Hello World!");
+                                }
+
+                                function someOtherFunction() {
+                                  alert ("This function was also executed!");
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <p>Puede agregar eventos de diferentes tipos a un mismo elemento:</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>This example uses the addEventListener() method to add many events on the same button.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button id="myBtn">Try it&lt;/button><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p id="demo">&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;var x = document.getElementById("myBtn");<br>
+                                    &emsp;&emsp;&emsp;x.addEventListener("mouseover", myFunction);<br>
+                                    &emsp;&emsp;&emsp;x.addEventListener("click", mySecondFunction);<br>
+                                    &emsp;&emsp;&emsp;x.addEventListener("mouseout", myThirdFunction);<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function myFunction() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML += "Moused over!&lt;br>";<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function mySecondFunction() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML += "Clicked!&lt;br>";<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function myThirdFunction() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML += "Moused out!&lt;br>";<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+                                <button id="myBtnX">Try it</button>
+
+                                <p id="demoX"></p>
+
+                                <script>
+                                var x = document.getElementById("myBtnX");
+                                x.addEventListener("mouseover", myFunctionX);
+                                x.addEventListener("click", mySecondFunctionXX);
+                                x.addEventListener("mouseout", myThirdFunctionXXX);
+
+                                function myFunctionX() {
+                                  document.getElementById("demoX").innerHTML += "Moused over!<br>";
+                                }
+
+                                function mySecondFunctionXX() {
+                                  document.getElementById("demoX").innerHTML += "Clicked!<br>";
+                                }
+
+                                function myThirdFunctionXXX() {
+                                  document.getElementById("demoX").innerHTML += "Moused out!<br>";
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Agregue un controlador de eventos al objeto de la ventana</h3>
+                        <p>
+                            El <a style="color: #DC143C;">addEventListener()</a>método le permite agregar detectores de eventos en cualquier objeto HTML DOM, como elementos HTML, el documento HTML, el objeto de ventana u otros objetos que admitan eventos, como el <a style="color: #DC143C;"> xmlHttpRequest </a> objeto.
+                        </p>
+                        <h4><b>Ejemplo</b></h4>
+                        <p>Agregue un detector de eventos que se activa cuando un usuario cambia el tamaño de la ventana:</p>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>This example uses the addEventListener() method on the window object.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>Try resizing this browser window to trigger the "resize" event handler.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p id="demo">&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;window.addEventListener("resize", function(){<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML =<br> Math.random();<br>
+                                    &emsp;&emsp;&emsp;});<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <p>This example uses the addEventListener() method on the window object.</p>
+
+                                <p>Try resizing this browser window to trigger the "resize" event handler.</p>
+
+                                <p id="demo"></p>
+
+                                <script>
+                                window.addEventListener("resize", function(){
+                                  document.getElementById("demo").innerHTML = Math.random();
+                                });
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <hr>
+                        <h3>Pasando Parámetros</h3>
+                        <p>Al pasar valores de parámetros, use una "función anónima" que llame a la función especificada con los parámetros:</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>This example demonstrates how to pass parameter values when using the addEventListener() method.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p>Click the button to perform a calculation.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;button id="myBtn">Try it&lt;/button><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;p id="demo"></p><br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;let p1 = 5;<br>
+                                    &emsp;&emsp;&emsp;let p2 = 7;<br>
+                                    &emsp;&emsp;&emsp;document.getElementById("myBtn").addEventListener("click", function() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;myFunction(p1, p2);<br>
+                                    &emsp;&emsp;&emsp;});<br>
+                                    <br>
+                                    &emsp;&emsp;&emsp;function myFunction(a, b) {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML = a * b;<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br>
+                                    <br>
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <p>This example demonstrates how to pass parameter values when using the addEventListener() method.</p>
+
+                                <p>Click the button to perform a calculation.</p>
+
+                                <button id="myBtnC">Try it</button>
+
+                                <p id="demoC"></p>
+
+                                <script>
+                                let p1 = 5;
+                                let p2 = 7;
+                                document.getElementById("myBtnC").addEventListener("click", function() {
+                                  myFunctionC(p1, p2);
+                                });
+
+                                function myFunctionC(a, b) {
+                                  document.getElementById("demoC").innerHTML = a * b;
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>   
+                        </div>
+                        <hr>
+                        <h3>Burbujeo de eventos o captura de eventos</h3>
+                        <p>
+                            Hay dos formas de propagación de eventos en HTML DOM, burbujeo y captura. <br><br>
+
+                            La propagación de eventos es una forma de definir el orden de los elementos cuando ocurre un evento. Si tiene un elemento &lt;p> dentro de un elemento &lt;div> y el usuario hace clic en el elemento &lt;p>, ¿qué evento de "clic" de elemento debe manejarse primero? <br><br>
+
+                            Al burbujear , el evento del elemento más interno se maneja primero y luego el externo: el evento de clic del elemento &lt;p> se maneja primero, luego el evento de clic del elemento &lt;div>. <br><br>
+
+                            Al capturar el evento del elemento más externo se maneja primero y luego el interno: el evento de clic del elemento &lt;div> se manejará primero, luego el evento de clic del elemento &lt;p>. <br><br>
+
+                            Con el método addEventListener() puedes especificar el tipo de propagación usando el parámetro "useCapture":
+                        </p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">addEventListener(event, function, useCapture);</i></p>
+                        </div>
+                        <p>El valor predeterminado es falso, que usará la propagación burbujeante, cuando el valor se establece en verdadero, el evento usa la propagación de captura.</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;head><br>
+                                    &emsp;&emsp;&lt;style><br>
+                                    &emsp;&emsp;&emsp;#myDiv1, #myDiv2 {<br>
+                                      &emsp;&emsp;&emsp;&emsp;background-color: coral;<br>
+                                      &emsp;&emsp;&emsp;&emsp;padding: 50px;<br>
+                                    &emsp;&emsp;&emsp;}<br><br>
+
+                                    &emsp;&emsp;&emsp;#myP1, #myP2 {<br>
+                                      &emsp;&emsp;&emsp;&emsp;background-color: white;<br> 
+                                      &emsp;&emsp;&emsp;&emsp;font-size: 20px;<br>
+                                      &emsp;&emsp;&emsp;&emsp;border: 1px solid;<br>
+                                      &emsp;&emsp;&emsp;&emsp;padding: 20px;<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/style><br>
+                                    &emsp;&emsp;&lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"><br>
+                                    &emsp;&lt;/head><br>
+                                    &emsp;&lt;body><br><br>
+
+                                    &emsp;&emsp;&lt;h2>JavaScript addEventListener()&lt;/h2><br><br>
+
+                                    &emsp;&emsp;&lt;div id="myDiv1"><br>
+                                      &emsp;&emsp;&emsp;&lt;h2>Bubbling:&lt;/h2><br>
+                                      &emsp;&emsp;&emsp;&lt;p id="myP1">Click me!&lt;/p><br>
+                                    &emsp;&emsp;&lt;/div>&lt;br><br><br>
+
+                                    &emsp;&emsp;&lt;div id="myDiv2"><br>
+                                      &emsp;&emsp;&emsp;&lt;h2>Capturing:&lt;/h2><br>
+                                      &emsp;&emsp;&emsp;&lt;p id="myP2">Click me!&lt;/p><br>
+                                    &emsp;&emsp;&lt;/div><br><br>
+
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;document.getElementById("myP1").addEventListener("click", function() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert("You clicked the white element!");<br>
+                                    &emsp;&emsp;&emsp;}, false);<br><br>
+
+                                    &emsp;&emsp;&emsp;document.getElementById("myDiv1").addEventListener("click", function() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert("You clicked the orange element!");<br>
+                                    &emsp;&emsp;&emsp;}, false);<br><br>
+
+                                    &emsp;&emsp;&emsp;document.getElementById("myP2").addEventListener("click", function() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert("You clicked the white element!");<br>
+                                    &emsp;&emsp;&emsp;}, true);<br>
+
+                                    &emsp;&emsp;&emsp;document.getElementById("myDiv2").addEventListener("click", function() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;alert("You clicked the orange element!");<br>
+                                    &emsp;&emsp;&emsp;}, true);<br>
+                                    &emsp;&emsp;&lt;/script><br><br>
+
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                <style>
+                                #myDiv1, #myDiv2 {
+                                  background-color: coral;
+                                  padding: 50px;
+                                }
+
+                                #myP1, #myP2 {
+                                  background-color: white; 
+                                  font-size: 20px;
+                                  border: 1px solid;
+                                  padding: 20px;
+                                }
+                                </style>
+                                <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+                                </head>
+                                <body>
+
+                                <h2>JavaScript addEventListener()</h2>
+
+                                <div id="myDiv1">
+                                  <h2>Bubbling:</h2>
+                                  <p id="myP1">Click me!</p>
+                                </div><br>
+
+                                <div id="myDiv2">
+                                  <h2>Capturing:</h2>
+                                  <p id="myP2">Click me!</p>
+                                </div>
+
+                                <script>
+                                document.getElementById("myP1").addEventListener("click", function() {
+                                  alert("You clicked the white element!");
+                                }, false);
+
+                                document.getElementById("myDiv1").addEventListener("click", function() {
+                                  alert("You clicked the orange element!");
+                                }, false);
+
+                                document.getElementById("myP2").addEventListener("click", function() {
+                                  alert("You clicked the white element!");
+                                }, true);
+
+                                document.getElementById("myDiv2").addEventListener("click", function() {
+                                  alert("You clicked the orange element!");
+                                }, true);
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>   
+                        </div>
+                        <hr>
+                        <h3>El método removeEventListener()</h3>
+                        <p>El <a style="color: #DC143C;"> removeEventListener() </a> método elimina los controladores de eventos que se han adjuntado con el método addEventListener(): </p>
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;head><br>
+                                    &emsp;&emsp;&lt;style><br>
+                                    &emsp;&emsp;&emsp;#myDIV {<br>
+                                      &emsp;&emsp;&emsp;&emsp;background-color: coral;<br>
+                                      &emsp;&emsp;&emsp;&emsp;border: 1px solid;<br>
+                                      &emsp;&emsp;&emsp;&emsp;padding: 50px;<br>
+                                      &emsp;&emsp;&emsp;&emsp;color: white;<br>
+                                      &emsp;&emsp;&emsp;&emsp;font-size: 20px;<br>
+                                    }&emsp;&emsp;&emsp;<br>
+                                    &emsp;&emsp;&lt;/style><br>
+                                    &emsp;&lt;/head><br>
+                                    &emsp;&lt;body><br><br>
+
+                                    &emsp;&emsp;&lt;h2>JavaScript removeEventListener()&lt;/h2><br><br>
+
+                                    &emsp;&emsp;&lt;div id="myDIV"><br>
+                                      &emsp;&emsp;&emsp;&lt;p>This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.&lt;/p><br>
+                                      &emsp;&emsp;&emsp;&lt;p>Click the button to remove the div's event handler.&lt;/p><br>
+                                      &emsp;&emsp;&emsp;&lt;button onclick="removeHandler()" id="myBtn">Remove&lt;/button><br>
+                                    &emsp;&emsp;&lt;/div><br><br>
+
+                                    &emsp;&emsp;&lt;p id="demo">&lt;/p><br><br>
+
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;document.getElementById("myDIV").addEventListener("mousemove", myFunction);<br><br>
+
+                                    &emsp;&emsp;&emsp;function myFunction() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("demo").innerHTML = Math.random();<br>
+                                    &emsp;&emsp;&emsp;}<br><br>
+
+                                    &emsp;&emsp;&emsp;function removeHandler() {<br>
+                                      &emsp;&emsp;&emsp;&emsp;document.getElementById("myDIV").removeEventListener("mousemove", myFunction);<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br><br>
+
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                <style>
+                                #myDIVL {
+                                  background-color: coral;
+                                  border: 1px solid;
+                                  padding: 50px;
+                                  color: white;
+                                  font-size: 20px;
+                                }
+                                </style>
+                                </head>
+                                <body>
+
+                                <h2>JavaScript removeEventListener()</h2>
+
+                                <div id="myDIVL">
+                                  <p>This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.</p>
+                                  <p>Click the button to remove the div's event handler.</p>
+                                  <button onclick="removeHandlerL()" id="myBtnL">Remove</button>
+                                </div>
+
+                                <p id="demoL"></p>
+
+                                <script>
+                                document.getElementById("myDIVL").addEventListener("mousemove", myFunctionL);
+
+                                function myFunctionL() {
+                                  document.getElementById("demoL").innerHTML = Math.random();
+                                }
+
+                                function removeHandlerL() {
+                                  document.getElementById("myDIVL").removeEventListener("mousemove", myFunctionL);
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>   
+                        </div>
+                        <h3>Referencia de objeto de evento HTML DOM</h3>
+                        <p>Para obtener una lista de todos los eventos DOM de HTML, consulte nuestra <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">referencia completa de objetos de eventos DOM de HTML </a>.</p>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    NODE 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services get-started" id="node">
+          <div class="container content-right">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Node DOM</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3 content-right">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <p class="mt-5">
+                        Adición y eliminación de nodos (elementos HTML)<br>
+                    </p> 
+                    <hr>
+                    <h3>Creación de nuevos elementos HTML (nodos)</h3>
+                    <p>Para agregar un nuevo elemento al HTML DOM, primero debe crear el elemento (nodo de elemento) y luego agregarlo a un elemento existente.</p>
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoNodos" aria-controls="contenidoNodos" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                    </button>
+
+                    <div class="collapse navbar-collapse " id="contenidoNodos" style="margin-top: 20px;">
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                    &emsp;&emsp;&lt;p>Add a new HTML Element.&lt;/p><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;div id="div1"><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p1">This is a paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p2">This is another paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&lt;/div><br>
+                                    <br>
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;const para = document.createElement("p");<br>
+                                    &emsp;&emsp;&emsp;const node = document.createTextNode("This is new.");<br>
+                                    &emsp;&emsp;&emsp;para.appendChild(node);<br>
+                                    &emsp;&emsp;&emsp;const element = document.getElementById("div1");<br>
+                                    &emsp;&emsp;&emsp;element.appendChild(para);<br>
+                                    &emsp;&emsp;&lt;/script><br><br>
+
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html>
+
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML DOM</h2>
+                                <p>Add a new HTML Element.</p>
+
+                                <div id="div1Q">
+                                <p id="p1Q">This is a paragraph.</p>
+                                <p id="p2Q">This is another paragraph.</p>
+                                </div>
+
+                                <script>
+                                const para = document.createElement("p");
+                                const node = document.createTextNode("This is new.");
+                                para.appendChild(node);
+                                const element = document.getElementById("div1Q");
+                                element.appendChild(para);
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div> 
+                        <h3>Ejemplo explicado </h3>
+                        <p>Este código crea un nuevo <a style="color: #DC143C;">&lt;p></a> elemento: </p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">const para = document.createElement("p");</i></p>
+                        </div>
+                        <p>Para agregar texto al <a style="color: #DC143C;"> &lt;p></a> elemento, primero debe crear un nodo de texto. Este código crea un nodo de texto:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">const node = document.createTextNode("This is a new paragraph.");</i></p>
+                        </div>
+                        <p>Luego debe agregar el nodo de texto al <a style="color: #DC143C;">&lt;p></a> elemento:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">para.appendChild(node);</i></p>
+                        </div>
+                        <p>Finalmente, debe agregar el nuevo elemento a un elemento existente. <br> <br>
+                        Este código encuentra un elemento existente:</p>  
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">const element = document.getElementById("div1");</i></p>
+                        </div> 
+                        <p>Este código agrega el nuevo elemento al elemento existente:</p><div class="cajaCodigo">
+                            <p><i style="color: #353535;">element.appendChild(para);</i></p>
+                        </div>
+                        <hr>
+                        <h3>Creación de nuevos elementos HTML - insertBefore()</h3>
+                        <p>El <a style="color: #DC143C;"> appendChild() </a> método del ejemplo anterior, agregó el nuevo elemento como el último hijo del padre. <br><br>
+                        Si no quieres eso, puedes usar el <a style="color: #DC143C;"> insertBefore() </a>método:</p> 
+                        <h3><b>Ejemplo</b></h3>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br><br>
+
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                    &emsp;&emsp;&lt;p>Add a new HTML Element.&lt;/p><br><br>
+
+                                    &emsp;&emsp;&lt;div id="div1"><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p1">This is a paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p2">This is another paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&lt;/div><br><br>
+
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;const para = document.createElement("p");<br>
+                                    &emsp;&emsp;&emsp;const node = document.createTextNode("This is new.");<br>
+                                    &emsp;&emsp;&emsp;para.appendChild(node);<br><br>
+
+                                    &emsp;&emsp;&emsp;const element = document.getElementById("div1");<br>
+                                    &emsp;&emsp;&emsp;const child = document.getElementById("p1");<br>
+                                    &emsp;&emsp;&emsp;element.insertBefore(para,child);<br>
+                                    &emsp;&emsp;&lt;/script><br><br>
+
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML DOM</h2>
+                                <p>Add a new HTML Element.</p>
+
+                                <div id="div1W">
+                                    <p id="p1W">This is a paragraph.</p>
+                                    <p id="p2W">This is another paragraph.</p>
+                                </div>
+
+                                <script>
+                                    const paraW = document.createElement("p");
+                                    const nodeW = document.createTextNode("This is new.");
+                                    paraW.appendChild(nodeW);
+
+                                    const elementW = document.getElementById("div1W");
+                                    const childW = document.getElementById("p1W");
+                                    elementW.insertBefore(paraW,childW);
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div> 
+                        <hr>
+                        <h3>Eliminación de elementos HTML existentes</h3> 
+                        <p>Para eliminar un elemento HTML, utilice el <a style="color: #DC143C;"> remove() </a> método:</p>
+                        <h3><b>Ejemplo</b></h3>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br><br>
+
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                    &emsp;&emsp;&lt;h3>Remove an HTML Element.&lt;/h3><br><br>
+
+                                    &emsp;&emsp;&lt;div><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p1">This is a paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p2">This is another paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&lt;/div><br><br>
+
+                                    &emsp;&emsp;&lt;button onclick="myFunction()">Remove Element&lt;/button><br><br>
+
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;function myFunction() {<br>
+                                    &emsp;&emsp;&emsp;&emsp;document.getElementById("p1").remove();<br>
+                                    &emsp;&emsp;&emsp;}<br>
+                                    &emsp;&emsp;&lt;/script><br><br>
+
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML DOM</h2>
+                                <h3>Remove an HTML Element.</h3>
+
+                                <div>
+                                <p id="p1e">This is a paragraph.</p>
+                                <p id="p2e">This is another paragraph.</p>
+                                </div>
+
+                                <button onclick="myFunctione()">Remove Element</button>
+
+                                <script>
+                                function myFunctione() {
+                                document.getElementById("p1e").remove();
+                                }
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div> 
+                        <h3>Ejemplo explicado </h3>
+                        <p>El documento HTML contiene un <a style="color: #DC143C;"> &lt;div> </a> elemento con dos nodos secundarios (dos <a style="color: #DC143C;"> &lt;p> </a> elementos):</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                &lt;div>
+                                  &lt;p id="p1">This is a paragraph.&lt;/p>
+                                  &lt;p id="p2">This is another paragraph.&lt;/p>
+                                &lt;/div>
+                            </i></p>
+                        </div>
+                        <p>Busque el elemento que desea eliminar:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                const elmnt = document.getElementById("p1");
+                            </i></p>
+                        </div>
+                        <p>Luego ejecute el método remove() en ese elemento:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                elmnt.remove();
+                            </i></p>
+                        </div>
+                        <hr>
+                        <h3>Eliminación de un nodo secundario</h3>
+                        <p>Para los navegadores que no admiten el <a style="color: #DC143C;"> remove() </a> método, debe encontrar el nodo principal para eliminar un elemento:</p>
+                        <h3><b>Ejemplo</b></h3>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br><br>
+
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                    &emsp;&emsp;&lt;p>Remove Child Element&lt;/p><br><br>
+
+                                    &emsp;&emsp;&lt;div id="div1"><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p1">This is a paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p2">This is another paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&lt;/div><br><br>
+
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;const parent = document.getElementById("div1");<br>
+                                    &emsp;&emsp;&emsp;const child = document.getElementById("p1");<br>
+                                    &emsp;&emsp;&emsp;parent.removeChild(child);<br>
+                                    &emsp;&emsp;&lt;/script><br><br>
+
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML DOM</h2>
+                                <p>Remove Child Element</p>
+
+                                <div id="div1r">
+                                <p id="p1r">This is a paragraph.</p>
+                                <p id="p2r">This is another paragraph.</p>
+                                </div>
+
+                                <script>
+                                const parentr = document.getElementById("div1r");
+                                const childr = document.getElementById("p1r");
+                                parentr.removeChild(childr);
+                                </script>
+
+                                </body>
+                                </html>
+                            </div>
+                        </div>
+                        <h3>Ejemplo explicado </h3>
+                        <p>Este documento HTML contiene un <a style="color: #DC143C;"> &lt;div> </a>  elemento con dos nodos secundarios (dos <a style="color: #DC143C;"> &lt;p> </a> elementos):</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                &lt;div id="div1">
+                                  &lt;p id="p1">This is a paragraph.&lt;/p>
+                                  &lt;p id="p2">This is another paragraph.&lt;/p>
+                                &lt;/div>
+                            </i></p>
+                        </div>
+                        <p>Encuentre el elemento con <a style="color: #DC143C;"> id="div1" </a>:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                const parent = document.getElementById("div1");
+                            </i></p>
+                        </div>
+                        <p>Encuentre el <a style="color: #DC143C;"> &lt;p> </a> elemento con <a style="color: #DC143C;"> id="p1" </a>:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                const child = document.getElementById("p1");
+                            </i></p>
+                        </div>
+                        <p>Eliminar el hijo del padre:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                parent.removeChild(child);
+                            </i></p>
+                        </div>
+                        <p>Aquí hay una solución común: busque el elemento secundario que desea eliminar y use su <a style="color: #DC143C;"> parentNode </a>propiedad para encontrar el elemento principal:</p>
+                        <div class="cajaCodigo">
+                            <p><i style="color: #353535;">
+                                const child = document.getElementById("p1");
+                                child.parentNode.removeChild(child);
+                            </i></p>
+                        </div>
+                        <hr>
+                        <h3>Sustitución de elementos HTML </h3>
+                        <p>Para reemplazar un elemento en HTML DOM, use el <a style="color: #DC143C;"> replaceChild() </a> método:</p>
+                        <h4><b>Ejemplo</b></h4>
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <p>
+                                    &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &emsp;&lt;body><br><br>
+
+                                    &emsp;&emsp;&lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                    &emsp;&emsp;&lt;h3>Replace an HTML Element.&lt;/h3><br><br>
+
+                                    &emsp;&emsp;&lt;div id="div1"><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p1">This is a paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&emsp;&lt;p id="p2">This is a paragraph.&lt;/p><br>
+                                    &emsp;&emsp;&lt;/div><br><br>
+
+                                    &emsp;&emsp;&lt;script><br>
+                                    &emsp;&emsp;&emsp;const parent = document.getElementById("div1");<br>
+                                    &emsp;&emsp;&emsp;const child = document.getElementById("p1");<br>
+                                    &emsp;&emsp;&emsp;const para = document.createElement("p");<br>
+                                    &emsp;&emsp;&emsp;const node = document.createTextNode("This is new.");<br>
+                                    &emsp;&emsp;&emsp;para.appendChild(node);<br>
+                                    &emsp;&emsp;&emsp;parent.replaceChild(para,child);<br>
+                                    &emsp;&emsp;&lt;/script><br><br>
+
+                                    &emsp;&lt;/body><br>
+                                    &lt;/html><br>
+
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <!DOCTYPE html>
+                                <html>
+                                <body>
+
+                                <h2>JavaScript HTML DOM</h2>
+                                <h3>Replace an HTML Element.</h3>
+
+                                <div id="div1R">
+                                <p id="p1R">This is a paragraph.</p>
+                                <p id="p2R">This is a paragraph.</p>
+                                </div>
+
+                                <script>
+                                const parentR = document.getElementById("div1R");
+                                const childR = document.getElementById("p1R");
+                                const paraR = document.createElement("p");
+                                const nodeR = document.createTextNode("This is new.");
+                                paraR.appendChild(nodeR);
+                                parentR.replaceChild(paraR,childR);
+                                </script>
+
+                                </body>
+                                </html>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    COLECCIONES
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services content-left" id="colecciones">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Colecciones DOM</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                  <p></p>
+                  <hr>
+                  <h2>Colecciones JavaScript H TML DOM</h2><br>
+                        <h3>El objeto HTMLCollection</h3>
+                        <p>El getElementsByTagName()método devuelve un HTMLCollectionobjeto.<br>
+
+                            Un HTMLCollectionobjeto es una lista similar a una matriz (colección) de elementos HTML.<br>
+
+                            El siguiente código selecciona todos los &lt;p>elementos en un documento:<br>
+                        </p>
+                        <div class="cajaCodigo">
+                            <p style="color: #353535;"><i>Ejemplo<br>
+                                                          const myCollection = document.getElementsByTagName("p"); <br></i></p>
+                        </div>
+                        <p>
+                            Se puede acceder a los elementos de la colección mediante un número de índice.<br>
+                            Para acceder al segundo elemento &lt;p> puedes escribir:<br>
+                         <a style="color:#DC143C;"> myCollection[1] </a></p>
+                        <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoHTML" aria-controls="contenidoHTML" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                        </button>
+
+                        <div class="collapse navbar-collapse " id="contenidoHTML" style="margin-top: 20px;">
+                            <hr>
+                            <h3>Ejemplo</h3>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                        <br>
+                                        &lt;p>Hello World!&lt;/p><br>
+                                        <br>
+                                        &lt;p>Hello Norway!&lt;/p><br>
+                                        <br>
+                                        &lt;p id="demo">&lt;/p><br>
+                                        <br>
+                                        &lt;script> const myCollection = document.getElementsByTagName("p");<br>
+                                        &lt;document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML; &lt;/script><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+                                        <br>
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <html>
+                                    <body>
+
+                                    <h2>JavaScript HTML DOM</h2>
+
+                                    <p>Hello World!</p>
+
+                                    <p>Hello Norway!</p>
+
+                                    <p id="demo"></p>
+
+                                    <script>
+                                    const myCollection = document.getElementsByTagName("p");
+                                    document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;
+
+                                    </script>
+
+                                    </body>
+                                    </html>
+                                </div>
+                            </div>
+                            <h4>Nota:</h4>
+                            <p>El índice comienza en 0.</p>
+
+
+                            <hr>
+                            <h3>HTML HTMLCollection Longitud</h3>
+                            <p>La propiedad length  define el número de elementos en un HTMLCollection: <br>
+                                Ejemplo:<br>
+                            <a style="color:#DC143C;"> myCollection.length </a></p>
+
+                            <h3>Ejemplo</h3>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                        <br>
+                                        &lt;p>Hello World!&lt;/p><br>
+                                        <br>
+                                        &lt;p>Hello Norway!&lt;/p><br>
+                                        <br>
+                                        &lt;p id="demo">&lt;/p><br>
+                                        <br>
+                                        &lt;script>
+                                        const myCollection = document.getElementsByTagName("p");
+
+                                        document.getElementById("demo").innerHTML = "This document contains " + myCollection.length + " paragraphs.";
+                                        <br>
+                                        &lt;/script><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h2>JavaScript HTML DOM</h2>
+                                    <p>Hello World!</p>
+                                    <p>Hello Norway!</p>
+                                    <p id="demo"></p>
+                                    <script>
+                                    const myCollection = document.getElementsByTagName("p");
+
+                                    document.getElementById("demo").innerHTML = "This document contains " + myCollection.length + " paragraphs.";
+
+                                    </script>
+                                </div>
+                            </div>
+                            <h3>La propiedad length es útil cuando desea recorrer los elementos de una colección:</h3>
+
+                            <hr>
+                            <h2>Ejemplo</h2>
+                            <p>Cambia el color del texto de todos los elementos <a style="color:#DC143C;"> &lt;p>: </a></p>
+                            <div class="cajaCodigo">
+                                <p><i style="color: #353535;">const myCollection = document.getElementsByTagName("p");<br>
+                                                                for (let i = 0; i < myCollection.length; i++) {<br>
+                                                                  myCollection[i].style.color = "red";<br>
+                                                                }<br>
+                                </i></p>
+                            </div>
+                            <p>Intentalo:</p>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                       &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                        <br>
+                                        &lt;p>Hello World!&lt;/p><br>
+                                        <br>
+                                        &lt;p>Hello Norway!&lt;/p><br>
+                                        <br>
+                                        &lt;p>Click the button to change the color of all p elements.&lt;/p><br>
+                                        <br>
+                                        &lt;button onclick="myFunction()">Try it&lt;/button><br>
+                                        <br>
+                                        &lt;script><br>
+                                        function myFunction() {<br>
+                                          const myCollection = document.getElementsByTagName("p");<br>
+                                          for (let i = 0; i < myCollection.length; i++) {<br>
+                                            myCollection[i].style.color = "red";<br>
+                                          }<br>
+                                        }<br>
+                                        &lt;/script><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <!DOCTYPE html>
+                                    <html>
+                                    <body>
+
+                                    <h2>JavaScript HTML DOM</h2>
+
+                                    <p>Hello World!</p>
+
+                                    <p>Hello Norway!</p>
+
+                                    <p>Click the button to change the color of all p elements.</p>
+
+                                    <button onclick="myFunction()">Try it</button>
+
+                                    <script>
+                                    function myFunction() {
+                                      const myCollection = document.getElementsByTagName("p");
+                                      for (let i = 0; i < myCollection.length; i++) {
+                                        myCollection[i].style.color = "red";
+                                      }
+                                    }
+                                    </script>
+
+                                    </body>
+                                    </html>
+                                </div>
+                            </div>
+
+                                <div class="cajaCodigo1">
+                                <p><i style="color: #353535;">¡Una HTMLCollection NO es una matriz!<br>
+
+                                    Una HTMLCollection puede parecer una matriz, pero no lo es.<br>
+
+                                    Puede recorrer la lista y hacer referencia a los elementos con un número (como una matriz).<br>
+
+                                    Sin embargo, no puede usar métodos de matriz como valueOf(), pop(), push() o join() en una HTMLCollection.<br>
+                                    </i></p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    LISTA DE NODOS DOM
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services get-started" id="listaNodos">
+          <div class="container content-right">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Lista de Nodos DOM</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3 content-right">
+              <div class="col-md-12" >
+                <div class="p-4 text-start " style="background-color: #e9ecef;">
+                  <p class="mt-5">Listas de nodos JavaScript HTML DOM</p>
+                  <hr>
+                  <h2>El objeto HTML DOM NodeList</h2>
+                  <p>Un NodeListobjeto es una lista (colección) de nodos extraídos de un documento.<br>
+
+                    Un NodeListobjeto es casi lo mismo que un HTMLCollectionobjeto.<br>
+
+                    Algunos navegadores (más antiguos) devuelven un objeto NodeList en lugar de HTMLCollection para métodos como getElementsByClassName().<br>
+
+                    Todos los navegadores devuelven un objeto NodeList para la propiedad childNodes. <br>
+
+                    La mayoría de los navegadores devuelven un objeto NodeList para el método querySelectorAll().<br>
+
+                    El siguiente código selecciona todos los &lt;p>nodos en un documento:</p>
+                  <div class="cajaCodigo">
+                      <p><i style="color: #353535;">const myNodeList = document.querySelectorAll("p");</i></p>
+                  </div>
+                  <p>Se puede acceder a los elementos de NodeList mediante un número de índice.<br>
+
+                        Para acceder al segundo nodo <a style="color: #DC143C;">&lt;p></a> puedes escribir: myNodeList[1] </p>
+                  <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoCSS" aria-controls="contenidoCSS" aria-expanded="false" aria-label="Toggle navigation">
+                      <a class="btn btn-outline-primary btn-lg">Leer más</a>
+                  </button>
+
+                  <div class="collapse navbar-collapse " id="contenidoCSS">
+                      <div class="row">
+                           <div class="col-5 cajaCodigoEjemplo">
+                              <p>
+                                  &lt;!DOCTYPE html><br>
+                                    &lt;html><br>
+                                    &lt;body><br>
+                                    <br>
+                                    &lt;h2>JavaScript HTML DOM&lt;/h2><br>
+                                    <br>
+                                    &lt;p>Hellow World!&lt;/p><br>
+                                    <br>
+                                    &lt;p>Hellow Norway!&lt;/p><br>
+                                    <br>
+                                    &lt;p id="demo">&lt;/p><br>
+                                    <br>
+                                    &lt;script><br>
+                                    const myNodelist = document.querySelectorAll("p");<br>
+                                    <br>
+                                    document.getElementById("demo").innerHTML = "This document contains " + myNodelist.length + " paragraphs.";
+                                    <br>
+                                    &lt;/script><br>
+                                    <br>
+                                    &lt;/body><br>
+                                    &lt;/html><br>
+                              </p>
+                          </div>
+                          <div class="col-5 cajaCodigoEjemplo">
+                              <h2>JavaScript HTML DOM</h2>
+
+                                <p>Hellow World!</p>
+
+                                <p>Hellow Norway!</p>
+                                <p>This document contains 3 paragraphs.</p>
+                          </div>
+                      </div>
+                      <div class="cajaCodigo1">
+                                <p><i style="color: #353535;">Nota: El índice comienza en 0.
+                                    </i></p>
+                         </div>
+
+                         <div>
+                            <h3><i style="color: #BE81F7;">La diferencia entre una HTMLCollection y una NodeList
+                                    </i></h3>
+                                <p> Una lista de nodos y una colección de HTML son prácticamente lo mismo.<br>
+
+                                Ambos son colecciones tipo matriz (listas) de nodos (elementos) extraídos de un documento. Se puede acceder a los nodos por números de índice. El índice comienza en 0.<br>
+
+                                Ambos tienen una propiedad de longitud que devuelve el número de elementos de la lista (colección).<br>
+
+                                Una HTMLCollection es una colección de elementos de documento .<br>
+
+                                Una lista de nodos es una colección de nodos de documentos (nodos de elementos, nodos de atributos y nodos de texto).<br>
+
+                                Se puede acceder a los elementos de HTMLCollection por su nombre, identificación o número de índice.<br>
+
+                                Solo se puede acceder a los elementos de NodeList por su número de índice.<br>
+
+                                Una HTMLCollection es siempre una colección en vivo . Ejemplo: si agrega un elemento &lt;li> a una lista en el DOM, la lista en HTMLCollection también cambiará.<br>
+
+                                Una NodeList suele ser una colección estática . Ejemplo: si agrega un elemento &lt;li> a una lista en el DOM, la lista en NodeList no cambiará.<br>
+
+                                Los métodos getElementsByClassName()y getElementsByTagName() devuelven una HTMLCollection activa.<br>
+
+                                El querySelectorAll()método devuelve una lista de nodos estática.<br>
+
+                                La childNodespropiedad devuelve una lista de nodos activa.<br> </p>
+                         </div>
+                    
+                      </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    NAVEGACION
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <section class="services content-left" id="navegacion">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Navegación.</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="bg-white p-4 text-start">
+                  <h2>JavaScript HTML DOM Navegación</h2>
+                    <p>Con HTML DOM, puede navegar por el árbol de nodos utilizando relaciones de nodos.</p>
+                    <h2>Nodos DOM</h2>
+                    <p>De acuerdo con el estándar W3C HTML DOM, todo en un documento HTML es un nodo:<br>
+                        <br>
+                        Todo el documento es un nodo de documento.<br>
+                        Cada elemento HTML es un nodo de elemento<br>
+                        El texto dentro de los elementos HTML son nodos de texto.<br>
+                        Cada atributo HTML es un nodo de atributo (obsoleto)<br>
+                        Todos los comentarios son nodos de comentarios.<br></p>
+
+                    <p>Con el HTML DOM, JavaScript puede acceder a todos los nodos del árbol de nodos.<br>
+
+                        Se pueden crear nuevos nodos y todos los nodos se pueden modificar o eliminar.</p>
+
+
+                    <h2>Relaciones de nodos</h2>
+                    <p>Los nodos del árbol de nodos tienen una relación jerárquica entre sí.<br>
+
+                    Los términos padre, hijo y hermano se utilizan para describir las relaciones.<br>
+
+                    En un árbol de nodos, el nodo superior se llama raíz (o nodo raíz)<br>
+                    Cada nodo tiene exactamente un padre, excepto la raíz (que no tiene padre)<br>
+                    Un nodo puede tener varios hijos.<br>
+                    Los hermanos (hermanos o hermanas) son nodos con el mismo padre.<br></p>
+
+                    <p>Desde el HTML anterior se puede leer:<br>
+
+                    &lt;html>es el nodo raíz<br>
+                    &lt;html>no tiene padres<br>
+                    &lt;html>es el padre de &lt;head>y&lt;body><br>
+                    &lt;head>es el primer hijo de&lt;html><br>
+                    &lt;body>es el ultimo hijo de&lt;html><br>
+                    y:
+
+                    &lt;head>tiene un hijo:&lt;title><br>
+                    &lt;title>tiene un hijo (un nodo de texto): "Tutorial DOM"<br>
+                    &lt;body>tiene dos hijos: &lt;h1>y&lt;p><br>
+                    &lt;h1>tiene un hijo: "Lección uno de DOM"<br>
+                    &lt;p>tiene un hijo: "¡Hola mundo!"<br>
+                    &lt;h1> y &lt;p>son hermanos<br></p>
+
+                    <h2>Navegación entre nodos</h2>
+                    <p>Puede usar las siguientes propiedades de nodo para navegar entre nodos con JavaScript:<br>
+
+                        *parentNode<br>
+                        *childNodes[nodenumber]<br>
+                        *firstChild<br>
+                        *lastChild<br>
+                        *nextSibling<br>
+                        *previousSibling<br></p>
+
+                    <h2>Nodos secundarios y valores de nodo</h2>
+                    <div class="cajaCodigo1">
+                        <p><i style="color: #353535;">Un error común en el procesamiento de DOM es esperar que un nodo de elemento contenga texto.
+                        </i></p>
+                    </div>
+
+                        
+                        <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoFormulario" aria-controls="contenidoFormulario" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="btn btn-outline-primary btn-lg">Leer más</a>
+                        </button>
+
+                        <div class="collapse navbar-collapse " id="contenidoFormulario">
+                            <div class="row">
+                                <div class="cajaCodigo">
+                            <p>
+                                <i style="color: #353535;">
+                                    EJEMPLO:<br>
+                                    &lt;title id="demo">DOM Tutorial&lt;/title><br>
+                                </i>
+                            </p>
+                        </div>
+
+                        <p>El nodo del elemento &lt;title>(en el ejemplo anterior) no contiene texto.<br>
+
+                            Contiene un nodo de texto con el valor "Tutorial DOM".<br>
+
+                            Se puede acceder al valor del nodo de texto mediante la innerHTMLpropiedad del nodo:<br>
+                            myTitle = document.getElementById("demo").innerHTML;<br><br>
+                            Acceder a la propiedad innerHTML es lo mismo que acceder a la nodeValue del primer hijo:<br>
+
+                            myTitle = document.getElementById("demo").firstChild.nodeValue;<br><br>
+                            El acceso al primer hijo también se puede hacer así:<br>
+
+                            myTitle = document.getElementById("demo").childNodes[0].nodeValue;<br><br>
+                            Todos los (3) ejemplos siguientes recuperan el texto de un &lt;h1>elemento y lo copian en un &lt;p>elemento<br>
+
+                        </p>
+
+                            </div>
+                            
+                            <hr>
+                            <h2>Ejemplo:</h2>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+                                       &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+
+                                        &lt;h1 id="id01">My First Page&lt;/h1><br>
+                                        &lt;p id="id02">&lt;/p><br>
+
+                                        &lt;script><br>
+                                        document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;<br>
+                                        &lt;/script><br>
+
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h1 id="id01">My First Page</h1>
+                                    <p>My First Page</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <h2>Ejemplo 2:</h2>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+                                       &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+
+                                        &lt;h1 id="id01">My First Page&lt;/h1><br>
+                                        &lt;p id="id02">&lt;/p><br>
+
+                                        &lt;script><br>
+                                        document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;<br>
+                                        &lt;/script><br>
+
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h1 id="id01">My First Page</h1>
+                                    <p>My First Page</p>
+                                </div>
+                            </div>
+
+                            <h2>Ejemplo 2:</h2>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+                                       &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+
+                                        &lt;h1 id="id01">My First Page&lt;/h1><br>
+                                        &lt;p id="id02"></p><br>
+
+                                        &lt;script><br>
+                                        document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+                                        &lt;/script><br>
+
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h1 id="id01">My First Page</h1>
+                                    <p>My First Page</p>
+                                </div>
+                            </div>                            
+
+                        
+                            <h2>HTML interno</h2>
+                            <p>    En este tutorial usamos la propiedad innerHTML para recuperar el contenido de un elemento HTML.<br>
+
+                                Sin embargo, aprender los otros métodos anteriores es útil para comprender la estructura de árbol y la navegación del DOM.<br></p> 
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////
+                                       INTEGRANTES
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <section id="testimonials content-botton" class="testimonials">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+          </svg>
+          <div class="container content-botton">
+            <div class="row text-center text-white">
+              <h1 class="display-3 fw-bold">Integrantes</h1>
+              <hr style="width: 100px; height: 3px; " class="mx-auto">
+              <p class="lead pt-1">Grupo 05</p>
+            </div>
+            <div class="row" style="background: rgba(255, 255, 255, 0.2); padding-top: 50px;">
+              <div class="col-1"></div>
+              <div class="col-2">
+                <h4 class="txtNav">Ricky Garcia</h4> 
+                <img src="../images/arts/ricky1.jpg" class="rounded-circle img-fluid" width="150px">
+              </div>
+              <div class="col-3" style="padding-top: 60px;">
+                <p class="txtNav">
+                  <b>Nombres: </b>Ricky Garcia</br>  
+                  <b>Mail: </b>ragarcia12@espe.edu.ec</br> 
+                  <b>Teléfono: </b>09872341537</br>
+                  <b>Carrera: </b>ITIN 
+                </p>
+              </div>
+
+              <div class="col-2">
+                <h4 class="txtNav">Gisselle Loachamin</h4> 
+                <img src="../images/arts/giss1.jpg" class="rounded-circle img-fluid" width="150px">
+              </div>
+                      
+              <div class="col-3" style="padding-top: 60px;">
+                <p class="txtNav">
+                  <b>Nombres: </b> Gisselle Loachamin</br>  
+                  <b>mail: </b> geloachamin1@espe.edu.ec</br> 
+                  <b>teléfono: </b> 0987251030</br>
+                  <b>Carrera: </b>ITIN  
+                </p> 
+              </div>
+                      
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-12 text-center">
+                  <i class="bi bi-facebook" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                  <i class="bi bi-twitter" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                  <i class="bi bi-youtube" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                  <i class="bi bi-whatsapp" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////
+                                   FOOTER  
+        ///////////////////////////////////////////////////////////////////////////////////////////////-->
+        <footer class="footer">
+          <!-- START THE SOCIAL MEDIA CONTENT  -->
+          <div class="footer-sm" style="background-color: #212121;">
+            <div class="container">
+              <div class="row py-4 text-center text-white">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                  Síguenos en las redes sociales
+                </div>
+                <div class="col-lg-7 col-md-6">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- START THE CONTENT FOR THE CAMPANY INFO -->
+          <div class="container mt-5">
+            <div class="row text-white justify-content-center mt-3 pb-3">
+              <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+                <h5 class="text-capitalize fw-bold">Universidad de las Fuerzas Armadas ESPE</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <p class="lh-lg">
+                  APLICACION DE TECNOLOGIAS WEB ---- NRC: 8496
+                </p>
+              </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+                    <h5 class="text-capitalize fw-bold">Contenido</h5>
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#introduccion">Introducción</a></li>
+                        <li><a href="#metodos">Metódos</a></li>
+                        <li><a href="#componentes">Componentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto" style="padding-top:35px">
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#elementos">Elementos</a></li>
+                        <li><a href="#html">HTML</a></li>
+                        <li><a href="#css">CSS</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto" style="padding-top:35px">
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#formulario">Formularios</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- BACK TO TOP BUTTON  -->
+        <a href="#home" class="shadow btn-primary rounded-circle back-to-top content-botton">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <script src="../assets/vendors/js/glightbox.min.js"></script>
+
+        <script type="text/javascript">
+              const lightbox = GLightbox({
+                'touchNavigation': true,
+                'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+                'type': 'video',
+                'source': 'youtube', //vimeo, youtube or local
+                'width': 900,
+                'autoPlayVideos': 'true',
+        });  
+        </script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.sr = ScrollReveal();
+            sr.reveal('.content-left', {
+                duration: 2000,
+                origin: 'left',
+                distance: '300px'
+            });
+            sr.reveal('.content-right', {
+                duration: 2000,
+                origin: 'right',
+                distance: '300px'
+            });
+            sr.reveal('.content-botton', {
+                duration: 2000,
+                origin: 'bottom',
+                delay: 200
+            });
+        </script>
+    </body>
+</html>

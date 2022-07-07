@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DOM Básico</title>
+        <link rel="icon" type="image/png" href="images/arts/icono.png">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/estilosHomePage.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////
+                                   START SECTION 1 - THE NAVBAR SECTION  
+    /////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top" id="navbar-example2">
+        <div class="container">
+          <a class="navbar-brand" href="">
+            <img src="images/DOM_LOGO.png" alt="logo image" style="width: 100px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link"  aria-current="page" href="#introduccion">Introduccion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#metodos">Metódos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#componentes">Componentes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#elementos">Elementos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#html">HTML</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#css">CSS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#formularios">Formularios</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    HEADER 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <section class="intro-section" id="home">
+          <div class="container">
+            <div class="row align-items-center text-white">
+              <!-- START THE CONTENT FOR THE INTRO  -->
+              <div class="col-md-6 intros text-start content-botton">
+                <h1 class="display-2">
+                  <span class="display-2--intro">DOM BASICO</span>
+                  <span class="display-2--description lh-base">
+                    El DOM, acrónimo de Document Object Model, es la herramienta base para manipular cualquier página web.
+                  </span>
+                </h1>
+              </div>
+              <!-- START THE CONTENT FOR THE VIDEO -->
+              <div class="col-md-6 intros text-end">
+                <div class="video-box">
+                  <img src="images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    Introducción
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services content-left" id="introduccion">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Introducción</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <p class="mt-5">Con HTML DOM, JavaScript puede acceder y cambiar todos los elementos de un
+                        documento HTML.</p>
+                    <p class="mt-5"> El HTML DOM (Modelo de objeto de documento) Cuando se carga una página web, el
+                        navegador crea un modelo de objeto de documento de la página. El modelo HTML DOM se
+                        construye como un árbol de Objetos:</p>
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoIntro" aria-controls="contenidoIntro" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a></button>
+
+                    <div class="collapse navbar-collapse " id="contenidoIntro" style="margin-top: 20px;">
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <h3><FONT COLOR="teal">Con el modelo de objetos, JavaScript obtiene todo el poder que necesita para
+                                     crear HTML dinámico:</FONT></h3>
+                                <p>
+                                    <br>* JavaScript puede cambiar todos los elementos HTML en la página
+                                    <br>* JavaScript puede cambiar todos los atributos HTML en la página
+                                    <br>* JavaScript puede cambiar todos los estilos CSS en la página
+                                    <br>* JavaScript puede eliminar elementos y atributos HTML existentes
+                                    <br>* JavaScript puede agregar nuevos elementos y atributos HTML
+                                    <br>* JavaScript puede reaccionar a todos los eventos HTML existentes en la
+                                        página
+                                    <br>* JavaScript puede crear nuevos eventos HTML en la página<br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <h3><FONT COLOR="teal">¿Qué es el DOM?</FONT></h3>
+                                <p>El DOM es un estándar W3C (World Wide Web Consortium).<br>
+                                    El DOM define un estándar para acceder a los documentos:<br>
+
+                                    "El Modelo de Objetos de Documento (DOM) del W3C es una plataforma y una
+                                    interfaz de lenguaje neutral que permite que los programas y scripts accedan y
+                                    actualicen dinámicamente el contenido, la estructura y el estilo de un
+                                    documento".<br>
+
+                                    El estándar W3C DOM se divide en 3 partes diferentes:<br>
+
+                                    * Core DOM: modelo estándar para todos los tipos de documentos<br>
+                                    * XML DOM - modelo estándar para documentos XML<br>
+                                    * HTML DOM - modelo estándar para documentos HTML<br>
+                                </p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        </div>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////
+                                       INTEGRANTES
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <section id="testimonials content-botton" class="testimonials">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+          </svg>
+          <div class="container content-botton">
+            <div class="row text-center text-white">
+              <h1 class="display-3 fw-bold">Integrantes</h1>
+              <hr style="width: 100px; height: 3px; " class="mx-auto">
+              <p class="lead pt-1">Grupo 05</p>
+            </div>
+            <div class="row" style="background: rgba(255, 255, 255, 0.2); padding-top: 50px;">
+              <div class="col-1"></div>
+              <div class="col-2">
+                <h4 class="txtNav">Ricky Garcia</h4> 
+                <img src="images/arts/ricky1.jpg" class="rounded-circle img-fluid" width="150px">
+              </div>
+              <div class="col-3" style="padding-top: 60px;">
+                <p class="txtNav">
+                  <b>Nombres: </b>Ricky Garcia</br>  
+                  <b>Mail: </b>ragarcia12@espe.edu.ec</br> 
+                  <b>Teléfono: </b>09872341537</br>
+                  <b>Carrera: </b>ITIN 
+                </p>
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////
+                                   FOOTER  
+        ///////////////////////////////////////////////////////////////////////////////////////////////-->
+        <footer class="footer">
+          <!-- START THE SOCIAL MEDIA CONTENT  -->
+          <div class="footer-sm" style="background-color: #212121;">
+            <div class="container">
+              <div class="row py-4 text-center text-white">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                  Síguenos en las redes sociales
+                </div>
+                <div class="col-lg-7 col-md-6">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- START THE CONTENT FOR THE CAMPANY INFO -->
+          <div class="container mt-5">
+            <div class="row text-white justify-content-center mt-3 pb-3">
+              <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+                <h5 class="text-capitalize fw-bold">Universidad de las Fuerzas Armadas ESPE</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <p class="lh-lg">
+                  APLICACION DE TECNOLOGIAS WEB ---- NRC: 8496
+                </p>
+              </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+                    <h5 class="text-capitalize fw-bold">Contenido</h5>
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#introduccion">Introducción</a></li>
+                        <li><a href="#metodos">Metódos</a></li>
+                        <li><a href="#componentes">Componentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto" style="padding-top:35px">
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#elementos">Elementos</a></li>
+                        <li><a href="#html">HTML</a></li>
+                        <li><a href="#css">CSS</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto" style="padding-top:35px">
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#formulario">Formularios</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- BACK TO TOP BUTTON  -->
+        <a href="#home" class="shadow btn-primary rounded-circle back-to-top content-botton">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <script src="assets/vendors/js/glightbox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+              const lightbox = GLightbox({
+                'touchNavigation': true,
+                'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+                'type': 'video',
+                'source': 'youtube', //vimeo, youtube or local
+                'width': 900,
+                'autoPlayVideos': 'true',
+        });  
+        </script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.sr = ScrollReveal();
+            sr.reveal('.content-left', {
+                duration: 2000,
+                origin: 'left',
+                distance: '300px'
+            });
+            sr.reveal('.content-right', {
+                duration: 2000,
+                origin: 'right',
+                distance: '300px'
+            });
+            sr.reveal('.content-botton', {
+                duration: 2000,
+                origin: 'bottom',
+                delay: 200
+            });
+        </script>
+    </body>
+</html>

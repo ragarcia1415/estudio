@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DOM Básico</title>
+        <link rel="icon" type="image/png" href="../images/arts/icono.png">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/fontawesome.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/estilosHomePage.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////
+                                   START SECTION 1 - THE NAVBAR SECTION  
+    /////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top" id="navbar-example2">
+        <div class="container">
+          <a class="navbar-brand" href="">
+            <img src="../images/DOM_LOGO.png" alt="logo image" style="width: 100px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link"  aria-current="page" href="#introduccion">Introduccion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#metodos">Metódos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#componentes">Componentes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#elementos">Elementos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#html">HTML</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#css">CSS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="#formularios">Formularios</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    HEADER 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <section class="intro-section" id="home">
+          <div class="container">
+            <div class="row align-items-center text-white">
+              <!-- START THE CONTENT FOR THE INTRO  -->
+              <div class="col-md-6 intros text-start content-botton">
+                <h1 class="display-2">
+                  <span class="display-2--intro">DOM BASICO</span>
+                  <span class="display-2--description lh-base">
+                    El DOM, acrónimo de Document Object Model, es la herramienta base para manipular cualquier página web.
+                  </span>
+                </h1>
+              </div>
+              <!-- START THE CONTENT FOR THE VIDEO -->
+              <div class="col-md-6 intros text-end">
+                <div class="video-box">
+                  <img src="../images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    Introducción
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services content-left" id="introduccion">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Introducción</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <p class="mt-5">Con HTML DOM, JavaScript puede acceder y cambiar todos los elementos de un
+                        documento HTML.</p>
+                    <p class="mt-5"> El HTML DOM (Modelo de objeto de documento) Cuando se carga una página web, el
+                        navegador crea un modelo de objeto de documento de la página. El modelo HTML DOM se
+                        construye como un árbol de Objetos:</p>
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoIntro" aria-controls="contenidoIntro" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a></button>
+
+                    <div class="collapse navbar-collapse " id="contenidoIntro" style="margin-top: 20px;">
+                        <div class="row">
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <h3><FONT COLOR="teal">Con el modelo de objetos, JavaScript obtiene todo el poder que necesita para
+                                     crear HTML dinámico:</FONT></h3>
+                                <p>
+                                    <br>* JavaScript puede cambiar todos los elementos HTML en la página
+                                    <br>* JavaScript puede cambiar todos los atributos HTML en la página
+                                    <br>* JavaScript puede cambiar todos los estilos CSS en la página
+                                    <br>* JavaScript puede eliminar elementos y atributos HTML existentes
+                                    <br>* JavaScript puede agregar nuevos elementos y atributos HTML
+                                    <br>* JavaScript puede reaccionar a todos los eventos HTML existentes en la
+                                        página
+                                    <br>* JavaScript puede crear nuevos eventos HTML en la página<br>
+                                </p>
+                            </div>
+                            <div class="col-5 cajaCodigoEjemplo">
+                                <h3><FONT COLOR="teal">¿Qué es el DOM?</FONT></h3>
+                                <p>El DOM es un estándar W3C (World Wide Web Consortium).<br>
+                                    El DOM define un estándar para acceder a los documentos:<br>
+
+                                    "El Modelo de Objetos de Documento (DOM) del W3C es una plataforma y una
+                                    interfaz de lenguaje neutral que permite que los programas y scripts accedan y
+                                    actualicen dinámicamente el contenido, la estructura y el estilo de un
+                                    documento".<br>
+
+                                    El estándar W3C DOM se divide en 3 partes diferentes:<br>
+
+                                    * Core DOM: modelo estándar para todos los tipos de documentos<br>
+                                    * XML DOM - modelo estándar para documentos XML<br>
+                                    * HTML DOM - modelo estándar para documentos HTML<br>
+                                </p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    Metódos
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services get-started" id="metodos">
+          <div class="container content-right">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Métodos</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3 content-right">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <p>Los métodos HTML DOM son acciones que puede realizar (en elementos HTML).</p>
+                    <p>Las propiedades HTML DOM son valores (de elementos HTML) que puede establecer o cambiar.<br></p>
+                    <h3>La interfaz de programación DOM</h3>
+                    <p class="mt-5">
+                        Se puede acceder al HTML DOM con JavaScript (y con otros lenguajes de programación).<br>
+
+                        En el DOM, todos los elementos HTML se definen como objetos .<br>
+
+                        La interfaz de programación son las propiedades y métodos de cada objeto.<br>
+
+                        Una propiedad es un valor que puede obtener o establecer (como cambiar el contenido de un elemento
+                        HTML).<br>
+
+                        Un método es una acción que puede realizar (como agregar o eliminar un elemento HTML).<br>
+                    </p>
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoMetodo" aria-controls="contenidoMetodo" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                    </button>
+                    <div class="collapse navbar-collapse " id="contenidoMetodo" style="margin-top: 20px;">
+                        <h3>Ejemplo</h3>
+                        El siguiente ejemplo cambia el contenido <a style="color: #DC143C;">(el innerHTML)</a> del <a style="color: #DC143C;">elemento con id="demo"</a>:
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 bg-light" style="border: solid 1px;">
+                                <h4>Codigo</h4>
+                                <pre>
+                                    &lt;html&gt;
+                                        &lt;body&gt;
+
+                                            &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+
+                                            &lt;script&gt;
+                                                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello World!&quot;;
+                                            &lt;/script&gt;
+
+                                        &lt;/body&gt;
+                                    &lt;/html&gt;
+                                </pre>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 bg-light" style="border: solid 1px;">
+                                <h4>Ejecucion</h4>
+                                <html>
+                                <body>
+                                    <p id="demo"></p>
+                                    <script>
+                                        document.getElementById("demo").innerHTML = "Hello World!";
+                                    </script>
+                                </body>
+                                </html>
+                            </div>
+                            <p style="margin-top: 20px;">En el ejemplo anterior, getElementById es un método , mientras que innerHTML es una propiedad.</p>
+                            <h3>El método getElementById</h3>
+                            <p>
+                                La forma más común de acceder a un elemento HTML es usar el iddel elemento. En el ejemplo anterior, el método <a style="color: #DC143C;"> getElementById </a> utilizado id="demo"para encontrar el elemento.
+                            </p>
+                            <h3>La propiedad HTML interior</h3>
+                            <p>
+                                La forma más sencilla de obtener el contenido de un elemento es mediante la innerHTMLpropiedad.
+                                La propiedad <a style="color: #DC143C;"> innerHTML </a>es útil para obtener o reemplazar el contenido de los elementos HTML.
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    Componentes
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services content-left" id="componentes">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Componentes</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <h4> El objeto del documento HTML DOM es el propietario de todos los demás objetos en su página web.<br> </h4>
+                    <h2>El objeto del documento HTML DOM es el propietario de todos los demás objetos en su página web.<br></h2>
+                    <p class="mt-5">
+                    El objeto de documento HTML DOM<br>
+                    El objeto del documento representa su página web.<br>
+
+                    Si desea acceder a cualquier elemento en una página HTML, siempre comienza accediendo al objeto del documento.<br>
+
+                    A continuación se muestran algunos ejemplos de cómo puede utilizar el objeto de documento para acceder y manipular HTML.</p>
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoComp" aria-controls="contenidoComp" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                    </button>
+                    <div class="collapse navbar-collapse " id="contenidoComp" style="margin-top: 20px;">
+                        <div class="container">
+                          <h2>Encontrar elementos HTML</h2>           
+                          <table class="table table-striped">
+                            <thead>
+                              <tr class="table-info">
+                                <th>Metodo</th>
+                                <th>Descripcion</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="table-light">document.getElementById(id)</td>
+                                <td class="table-light">Encuentra un elemento por id de elemento.</td>
+                              </tr>
+                              <tr>
+                                <td class="table-light">document.getElementsByTagName(name)</td>
+                                <td class="table-light">Buscar elementos por nombre de etiqueta</td>
+                              </tr>
+                              <tr>
+                                <td class="table-light">document.getElementsByClassName(name)</td>
+                                <td class="table-light">Buscar elementos por nombre de clase</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="container">
+
+                          <h2>Adición de controladores de eventos</h2>           
+                          <table class="table table-striped">
+                            <thead>
+                              <tr class="table-info">
+                                <th>Metodo</th>
+                                <th>Descripcion</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="table-light">document.getElementById(id).onclick = function(){code}</td>
+                                <td class="table-light">Agregar código de controlador de eventos a un evento onclick</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="container">
+                        <h2>Cambio de elementos HTML</h2>           
+                          <table class="table table-striped">
+                            <thead>
+                              <tr class="table-info">
+                                <th>Propiedades</th>
+                                <th>Descripcion</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="table-light">element.innerHTML =  new html content</td>
+                                <td class="table-light">Cambiar el HTML interno de un elemento</td>
+                              </tr>
+                              <tr>
+                                <td class="table-light">element.attribute = new value</td>
+                                <td class="table-light">Cambiar el valor del atributo de un elemento HTML</td>
+                              </tr>
+                              <tr>
+                                <td class="table-light">element.style.property = new style</td>
+                                <td class="table-light">Cambiar el estilo de un elemento HTML</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <table class="table table-striped">
+                            <thead>
+                              <tr class="table-info">
+                                <th>Metodo</th>
+                                <th>Descripcion</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="table-light">element.setAttribute(attribute, value)</td>
+                                <td class="table-light">Cambiar el valor del atributo de un elemento HTML</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>     
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    Elementos
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services get-started" id="elementos">
+          <div class="container content-right">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Elementos</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3 content-right">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                    <h3>Encontrar elementos HTML</h3>
+                    <p class="mt-5">
+                        A menudo, con JavaScript, desea manipular elementos HTML.<br>
+
+                        Para hacerlo, primero tienes que encontrar los elementos. Hay varias maneras de hacer esto:<br>
+                        <ul>
+                            <li>Encontrar elementos HTML por ID</li>
+                            <li>Encontrar elementos HTML por nombre de etiqueta</li>
+                            <li>Encontrar elementos HTML por nombre de clase</li>
+                            <li>Encontrar elementos HTML mediante selectores CSS</li>
+                            <li>Encontrar elementos HTML por colecciones de objetos HTML</li>
+                        </ul>
+                    </p> 
+                    <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoHTML" aria-controls="contenidoHTML" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                    </button>
+
+                    <div class="collapse navbar-collapse " id="contenidoHTML" style="margin-top: 20px;">
+                        <h3>Encontrar elemento HTML por ID</h3>
+                        <p>La forma más fácil de encontrar un elemento HTML en el DOM es utilizando la identificación del elemento.
+
+                        Este ejemplo encuentra el elemento con id="intro":</p>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 bg-light" style="border: solid 1px;">
+                                <h4>Codigo</h4>
+                                <pre>
+                                    &lt;!DOCTYPE html&gt;
+                                    &lt;html&gt;
+                                        &lt;body&gt;
+
+                                            &lt;h2&gt;JavaScript HTML DOM&lt;/h2&gt;
+
+                                            &lt;p id=&quot;intro&quot;&gt;Finding HTML Elements by Id&lt;/p&gt;
+                                            &lt;p&gt;This example demonstrates the &lt;b&gt;getElementsById&lt;/b&gt; method.&lt;/p&gt;
+
+                                            &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+
+                                            &lt;script&gt;
+                                            const element = document.getElementById(&quot;intro&quot;);
+
+                                            document.getElementById(&quot;demo&quot;).innerHTML = 
+                                            &quot;The text from the intro paragraph is: &quot; + element.innerHTML;
+
+                                            &lt;/script&gt;
+
+                                        &lt;/body&gt;
+                                    &lt;/html&gt;
+
+                                </pre>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 bg-light" style="border: solid 1px;">
+                                <h4>Ejecucion</h4>
+                                
+                                
+                                <h2>JavaScript HTML DOM</h2>
+                                
+                                <p id="introEl">Finding HTML Elements by Id</p>
+                                <p>This example demonstrates the <b>getElementsById</b> method.</p>
+                                
+                                <p id="demoEl"></p>
+                                
+                                <script>
+                                const element = document.getElementById("introEl");
+                                
+                                document.getElementById("demoEl").innerHTML = 
+                                "The text from the intro paragraph is: " + element.innerHTML;
+                                
+                                </script>   
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    HTML
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services content-left" id="html">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">HTML</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="p-4 text-start">
+                  <p>El HTML DOM permite que JavaScript cambie el contenido de los elementos HTML.</p>
+                  <hr>
+                  <h2>Cambio de contenido HTML</h2>
+                        <p>La forma más sencilla de modificar el contenido de un elemento HTML es mediante la propiedad <a style="color: #DC143C;"> innerHTML </a>. Para cambiar el contenido de un elemento HTML, utilice esta sintaxis:<br>
+                        </p>
+                        <div class="cajaCodigo">
+                            <p style="color: #353535;"><i>document.getElementById(id).innerHTML = new HTML</i></p>
+                        </div>
+                        <p>Este ejemplo cambia el contenido de un elemento: <a style="color:#DC143C;"> &lt;p> </a></p>
+                        <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoHTML" aria-controls="contenidoHTML" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="btn btn-outline-primary btn-lg header-btn">Leer más</a>
+                        </button>
+
+                        <div class="collapse navbar-collapse " id="contenidoHTML" style="margin-top: 20px;">
+                            <hr>
+                            <h3>Ejemplo</h3>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h2>JavaScript can Change HTML&lt;/h2><br>
+                                        <br>
+                                        &lt;p id="p1">Hello World!&lt;/p><br>
+                                        <br>
+                                        &lt;script><br>
+                                        document.getElementById("p1").innerHTML = "New text!";<br>
+                                        &lt;/script><br>
+                                        <br>
+                                        &lt;p>The paragraph above was changed by a script.&lt;/p><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h2>JavaScript can Change HTML</h2>
+                                    <p id="p1">Hello World!</p>
+                                    <script>
+                                    document.getElementById("p1").innerHTML = "New text!";
+                                    </script>
+                                    <p>The paragraph above was changed by a script.</p>
+                                </div>
+                            </div>
+                            <h4>Ejemplo explicado:</h4>
+                            <ul>
+                                <li>El documento HTML anterior contiene un elemento<a style="color:#DC143C;"> &lt;p> </a> con <a style="color:#DC143C;"> id="p1" </a></li>
+                                <li>Usamos el HTML DOM para obtener el elemento con <a style="color:#DC143C;">id="p1" </a></li>
+                                <li>Un JavaScript para cambia el contenido ( <a style="color:#DC143C;">innerHTML</a>) de ese elemento a "¡Texto nuevo!"</li>
+                            </ul>
+                            <hr>
+                            <p>Este ejemplo cambia el contenido de un elemento <a style="color:#DC143C;">&lt;h1> </a>:</p>
+                            <h3>Ejemplo</h3>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h1 id="id01">Old Heading&lt;/h1><br>
+                                        <br>
+                                        &lt;script><br>
+                                        const element = document.getElementById("id01");<br>
+                                        element.innerHTML = "New Heading";<br>
+                                        &lt;/script><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h1 id="id01">Old Heading</h1>
+
+                                    <script>
+                                    const element = document.getElementById("id01");
+                                    element.innerHTML = "New Heading";
+                                    </script>
+
+                                    <p>JavaScript changed "Old Heading" to "New Heading".</p>
+                                </div>
+                            </div>
+                            <h3>Ejemplo explicado:</h3>
+                            <ul>
+                                <li>El documento HTML anterior contiene un elemento <a style="color:#DC143C;">&lt;h1></a> con <a style="color:#DC143C;">id="id01"</a></li>
+                                <li>Usamos el HTML DOM para obtener el elemento con <a style="color:#DC143C;">id="id01"</a></li>
+                                <li>Un JavaScript cambia el contenido ( <a style="color:#DC143C;">innerHTML</a>) de ese elemento a "Nuevo encabezado"</li>
+                            </ul>
+                            <hr>
+                            <h2>Cambiar el valor de un atributo</h2>
+                            <p>Para cambiar el valor de un atributo HTML, utilice esta sintaxis:</p>
+                            <div class="cajaCodigo">
+                                <p><i style="color: #353535;">document.getElementById(id).attribute = new value</i></p>
+                            </div>
+                            <p>Este ejemplo cambia el valor del atributo src de un  elemento:<a style="color:#DC143C;">&lt;img></a></p>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;img id="myImage" src="img/noExiste.png"><br>
+                                        <br>
+                                        &lt;script><br>
+                                        document.getElementById("myImage").src = "img/Logo_ESPE.png";<br>
+                                        &lt;/script><br>
+                                        <br>
+                                        &lt;p>The original image was noExiste.png, but the script changed it to Logo_ESPE.png</p><br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h2>JavaScript HTML DOM</h2>
+                                    <img id="image" src="img/noExiste.png" width="160" height="120">
+                                    <script>
+                                        document.getElementById("image").src = "../images/arts/Logo_ESPE.png";
+                                    </script>
+                                    <p>The original image was noExiste.png, but the script changed it to Logo_ESPE.png</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <h3>Ejemplo explicado:</h3>
+                            <ul>
+                                <li>El documento HTML anterior contiene un elemento <a style="color:#DC143C;">&lt;img></a>  con <a style="color:#DC143C;">id="myImage"</a></li>
+                                <li>Usamos el HTML DOM para obtener el elemento con <a style="color:#DC143C;"> id="myImage"</a></li>
+                                <li>Un JavaScript cambia el <a style="color:#DC143C;">src</a> atributo de ese elemento de "noExiste.png" a "Logo_ESPE.png</li>
+                            </ul>
+                            <h2>Contenido HTML dinámico</h2>
+                            <p>JavaScript puede crear contenido HTML dinámico:</p>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;p id="demo">&lt;/p><br>
+                                        <br>
+                                        &lt;script><br>
+                                        document.getElementById("demo").innerHTML = "Date : " + Date();<br>
+                                        &lt;/script><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p id="demo"></p>
+                                    <script>
+                                    document.getElementById("demo").innerHTML = "Date : " + Date();
+                                    </script>
+                                </div>
+                            </div>
+                            <h2>document.write</h2>
+                            <p>En JavaScript, <a style="color:#DC143C;">document.write()</a> se puede usar para escribir directamente en el flujo de salida HTML:</p>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;p>Bla, bla, bla&lt;/p><br>
+                                        <br>
+                                        &lt;script><br>
+                                        document.write(Date());<br>
+                                        &lt;/script><br>
+                                        <br>
+                                        &lt;p>Bla, bla, bla&lt;/p><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <script>
+                                    document.write(Date());
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    CSS
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+        <section class="services get-started" id="css">
+          <div class="container content-right">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">CSS</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3 content-right">
+              <div class="col-md-12" >
+                <div class="p-4 text-start " style="background-color: #e9ecef;">
+                  <p class="mt-5">El HTML DOM permite que JavaScript cambie el estilo de los elementos HTML.</p>
+                  <hr>
+                  <h2>Cambio de estilo HTML</h2>
+                  <p>Para cambiar el estilo de un elemento HTML, use esta sintaxis:</p>
+                  <div class="cajaCodigo">
+                      <p><i style="color: #353535;">document.getElementById(id).style.property = new style</i></p>
+                  </div>
+                  <p>El siguiente ejemplo cambia el estilo de un elemento <a style="color: #DC143C;">&lt;p></a>:</p>
+                  <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoCSS" aria-controls="contenidoCSS" aria-expanded="false" aria-label="Toggle navigation">
+                      <a class="btn btn-outline-primary btn-lg">Leer más</a>
+                  </button>
+
+                  <div class="collapse navbar-collapse " id="contenidoCSS">
+                      <div class="row">
+                           <div class="col-5 cajaCodigoEjemplo">
+                              <p>
+                                  &lt;!DOCTYPE html><br>
+                                  &lt;html><br>
+                                  &lt;body><br>
+                                  <br>
+                                  &lt;h2>JavaScript HTML DOM</h2><br>
+                                  &lt;p>Changing the HTML style:</p><br>
+                                  <br>
+                                  &lt;p id="p1">Hello World!</p><br>
+                                  &lt;p id="p2">Hello World!</p><br>
+                                  <br>
+                                  &lt;script><br>
+                                  document.getElementById("p2").style.color = "blue";<br>
+                                  document.getElementById("p2").style.fontFamily = "Arial";<br>
+                                  document.getElementById("p2").style.fontSize = "larger";<br>
+                                  &lt;/script><br>
+                                  <br>
+                                  <br>
+                                  &lt;/body><br>
+                                  &lt;/html><br>
+                              </p>
+                          </div>
+                          <div class="col-5 cajaCodigoEjemplo">
+                              <h2>JavaScript HTML DOM</h2>
+                              <p>Changing the HTML style:</p>
+
+
+                              <p id="p1">Hello World!</p>
+                              <p id="p2">Hello World!</p>
+
+                              <script>
+                              document.getElementById("p2").style.color = "blue";
+                              document.getElementById("p2").style.fontFamily = "Arial";
+                              document.getElementById("p2").style.fontSize = "larger";
+                              </script>
+                          </div>
+                      </div>
+                      <hr>
+                      <h2>Uso de eventos</h2>
+                      <p>El HTML DOM le permite ejecutar código cuando ocurre un evento.</p>
+                      <p>Los eventos son generados por el navegador cuando "le suceden cosas" a los elementos HTML:</p>
+                      <ul>
+                          <li>Se hace clic en un elemento</li>
+                          <li>La página ha cargado</li>
+                          <li>Los campos de entrada se cambian</li>
+                      </ul>
+                      <p>Este ejemplo cambia el estilo del elemento HTML con <a style="color: #DC143C;">id="id1"</a> , cuando el usuario hace clic en un botón:</p>
+                      <div class="row">
+                          <div class="col-5 cajaCodigoEjemplo">
+                               <p>
+                                  &lt;!DOCTYPE html><br>
+                                  &lt;html><br>
+                                  &lt;body><br>
+                                  <br>
+                                  &lt;h1 id="id1">My Heading 1&lt;/h1><br>
+                                  <br>
+                                  &lt;button type="button"<br>
+                                  onclick="document.getElementById('id1').style.color = 'red'"><br>
+                                  Click Me!&lt;/button><br>
+                                  <br>
+                                  &lt;/body><br>
+                                  &lt;/html><br>
+                              </p>
+                          </div>
+                          <div class="col-5 cajaCodigoEjemplo">
+                              <h1 id="id1">My Heading 1</h1>
+                              <button type="button" onclick="document.getElementById('id1').style.color = 'red'">Click Me!</button>
+                          </div>
+                      </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+                                    FORMULARIO
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <section class="services content-left" id="formularios">
+          <div class="container">
+            <div class="row text-center">
+              <h1 class="display-3 fw-bold display-3--title">Formulario.</h1>
+              <div class="heading-line mb-1"></div>
+            </div>
+          <!-- START THE DESCRIPTION CONTENT  -->
+            <div class="row pt-2 pb-2 mt-0 mb-3">
+              <div class="col-md-12">
+                <div class="bg-white p-4 text-start">
+                  <h2>Validación de formulario JavaScript</h2>
+                        <p>La validación de formularios HTML se puede realizar mediante JavaScript. <br>
+                        Si un campo de formulario (fname) está vacío, esta función alerta con un mensaje y devuelve falso para evitar que se envíe el formulario:</p>
+
+                        <div class="cajaCodigo">
+                            <p>
+                                <i style="color: #353535;">
+                                    function validateForm() {<br>
+                                    &nbsp;let x = document.forms["myForm"]["fname"].value;<br>
+                                    &nbsp;    if (x == "") {<br>
+                                    &nbsp;&nbsp;    alert("Name must be filled out");<br>
+                                    &nbsp;&nbsp;    return false;<br>
+                                    &nbsp;    }<br>
+                                    }
+                                </i>
+                            </p>
+                        </div>
+
+                        <p>La función se puede llamar cuando se envía el formulario:</p>
+
+                        <button class="navbar-toggler rounded mx-auto d-block content-botton" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoFormulario" aria-controls="contenidoFormulario" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="btn btn-outline-primary btn-lg">Leer más</a>
+                        </button>
+
+                        <div class="collapse navbar-collapse " id="contenidoFormulario">
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;head><br>
+                                        &lt;script><br>
+                                        function validateForm() {<br>
+                                          let x = document.forms["myForm"]["fname"].value;<br>
+                                          if (x == "") {<br>
+                                            alert("Name must be filled out");<br>
+                                            return false;<br>
+                                          }<br>
+                                        }<br>
+                                        &lt;/script><br>
+                                        &lt;/head><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h2>JavaScript Validation&lt;/h2><br>
+                                        <br>
+                                        &lt;form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post"><br>
+                                          Name: &lt;input type="text" name="fname"><br>
+                                          &lt;input type="submit" value="Submit"><br>
+                                        &lt;/form><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <script>
+                                        function validateForm() {
+                                          let x = document.forms["myForm"]["fname"].value;
+                                          if (x == "") {
+                                            alert("Name must be filled out");
+                                          }
+                                          return false;
+                                        }
+                                    </script>
+
+                                    <h2>JavaScript Validation</h2>
+
+                                    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                                      Name: <input type="text" name="fname">
+                                      <input type="submit" value="Submit">
+                                    </form>
+                                </div>
+                            </div>
+                            <hr>
+                            <h2>JavaScript puede validar la entrada numérica</h2>
+                            <p>JavaScript se usa a menudo para validar la entrada numérica:</p>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h2>JavaScript Validation&lt;/h2><br>
+                                        <br>
+                                        &lt;p>Please input a number between 1 and 10:&lt;/p><br>
+                                        <br>
+                                        &lt;input id="numb"><br>
+                                        <br>
+                                        &lt;button type="button" onclick="myFunction()">Submit&lt;/button><br>
+                                        <br>
+                                        &lt;p id="demo">&lt;/p><br>
+                                        <br>
+                                        &lt;script><br>
+                                        <br>function myFunction() {
+                                        <br>  // Get the value of the input field with id="numb"
+                                        <br>  let x = document.getElementById("numb").value;
+                                        <br>  // If x is Not a Number or less than one or greater than 10
+                                        <br>  let text;
+                                        <br>  if (isNaN(x) || x < 1 || x > 10) {
+                                        <br>    text = "Input not valid";
+                                        <br>  } else {
+                                        <br>    text = "Input OK";
+                                        <br>  }
+                                        <br>  document.getElementById("demo").innerHTML = text;
+                                        <br>}
+                                        <br>&lt;/script>
+                                        <br>
+                                        <br>&lt;/body>
+                                        <br>&lt;/html> 
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h2>JavaScript Validation</h2>
+
+                                    <p>Please input a number between 1 and 10:</p>
+
+                                    <input id="numb">
+
+                                    <button type="button" onclick="myFunctionDos()">Submit</button>
+
+                                    <p id="demoDos"></p>
+
+                                    <script>
+                                    function myFunctionDos() {
+                                      // Get the value of the input field with id="numb"
+                                      let x = document.getElementById("numb").value;
+                                      // If x is Not a Number or less than one or greater than 10
+                                      let text;
+                                      if (isNaN(x) || x < 1 || x > 10) {
+                                        text = "Input not valid";
+                                      } else {
+                                        text = "Input OK";
+                                      }
+                                      document.getElementById("demoDos").innerHTML = text;
+                                    }
+                                    </script>
+                                </div>
+                            </div>
+                            <hr>
+                            <h2>Validación automática de formularios HTML</h2>
+                            <p>El navegador puede realizar automáticamente la validación del formulario HTML:</p>
+                            <p>Si un campo de formulario (fname) está vacío, el <a style="color: #DC143C;"> required </a> atributo impide que se envíe este formulario:</p>
+                            <div class="row">
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <p>
+                                        &lt;!DOCTYPE html><br>
+                                        &lt;html><br>
+                                        &lt;body><br>
+                                        <br>
+                                        &lt;h2>JavaScript Validation&lt;/h2><br>
+                                        <br>
+                                        &lt;form action="/action_page.php" method="post"><br>
+                                          &lt;input type="text" name="fname" required><br>
+                                          &lt;input type="submit" value="Submit"><br>
+                                        &lt;/form><br>
+                                        <br>
+                                        &lt;p>If you click submit, without filling out the text field,<br>
+                                        your browser will display an error message.&lt;/p><br>
+                                        <br>
+                                        &lt;/body><br>
+                                        &lt;/html><br>
+                                    </p>
+                                </div>
+                                <div class="col-5 cajaCodigoEjemplo">
+                                    <h2>JavaScript Validation</h2>
+
+                                    <form action="" method="post">
+                                      <input type="text" name="fname" required>
+                                      <input type="submit" value="Submit">
+                                    </form>
+
+                                    <p>If you click submit, without filling out the text field,
+                                    your browser will display an error message.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <h2>Validación de datos</h2>
+                            <p>La validación de datos es el proceso de garantizar que la entrada del usuario sea limpia, correcta y útil. <br>
+                            Las tareas típicas de validación son:</p>
+                            <ul>
+                                <li>¿Ha rellenado el usuario todos los campos obligatorios?</li>
+                                <li>¿El usuario ha ingresado una fecha válida?</li>
+                                <li>¿Ha ingresado el usuario texto en un campo numérico?</li>
+                            </ul>
+                            <p>Muy a menudo, el propósito de la validación de datos es garantizar la entrada correcta del usuario.</p>
+                            <p>La validación se puede definir mediante muchos métodos diferentes y se puede implementar de muchas maneras diferentes.</p>
+                            <p><b>La validación del lado del servidor la </b>realiza un servidor web, después de que la entrada se haya enviado al servidor.</p>
+                            <p><b>La validación del lado del cliente la </b> realiza un navegador web, antes de enviar la entrada a un servidor web.</p>
+                            <hr>
+                            <h2>Validación de restricciones HTML</h2>
+                            <p>HTML5 introdujo un nuevo concepto de validación de HTML llamado <b> validación de restricciones .</b></p>
+                            <p>La validación de restricciones HTML se basa en:</p>
+                            <ul>
+                                <li><b>Atributos de entrada HTML </b> de validación de restricciones</li>
+                                <li>Validación de restricciones <b> CSS Pseudoselectores</b></li>
+                                <li>Validación de restricciones <b> Propiedades y métodos del DOM</b></li>
+                            </ul>
+                            <h2>Atributos de entrada HTML de validación de restricciones</h2>
+
+                            <table class="table table-striped">
+                              <thead>
+                                <tr class="table-info">
+                                  <th scope="col">Attribute</th>
+                                  <th scope="col">Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="table-light">disabled</td>
+                                  <td class="table-light">Specifies that the input element should be disabled</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">max</td>
+                                  <td class="table-light">Specifies the maximum value of an input element</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">min</td>
+                                  <td class="table-light">Specifies the minimum value of an input element</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">pattern</td>
+                                  <td class="table-light">Specifies the value pattern of an input element</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">required</td>
+                                  <td class="table-light">Specifies that the input field requires an element</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">type </td>
+                                  <td class="table-light">Specifies the type of an input element</td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            <p>Para obtener una lista completa, vaya a <a target="_blank" href="https://www.w3schools.com/html/html_form_attributes.asp">Atributos de entrada HTML</a>.</p>
+
+                            <h2>Validación de restricciones CSS</h2>
+                            <h3>Pseudoselectores</h3>
+                            <table class="table table-striped">
+                              <thead>
+                                <tr class="table-info">
+                                  <th scope="col">Selector</th>
+                                  <th scope="col">Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="table-light">:disabled</td>
+                                  <td class="table-light">Selects input elements with the "disabled" attribute specified</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">:invalid</td>
+                                  <td class="table-light">Selects input elements with invalid values</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">:optional</td>
+                                  <td class="table-light"> Selects input elements with no "required" attribute specified</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">:required</td>
+                                  <td class="table-light">Selects input elements with the "required" attribute specified</td>
+                                </tr>
+                                <tr>
+                                  <td class="table-light">:valid</td>
+                                  <td class="table-light">Selects input elements with valid values</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p>Para obtener una lista completa, vaya a <a target="_blank" href="https://www.w3schools.com/css/css_pseudo_classes.asp">CSS Pseudo Classes</a> .</p> 
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        </div>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////
+                                       INTEGRANTES
+        /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <section id="testimonials content-botton" class="testimonials">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+          </svg>
+          <div class="container content-botton">
+            <div class="row text-center text-white">
+              <h1 class="display-3 fw-bold">Integrantes</h1>
+              <hr style="width: 100px; height: 3px; " class="mx-auto">
+              <p class="lead pt-1">Grupo 05</p>
+            </div>
+            <div class="row" style="background: rgba(255, 255, 255, 0.2); padding-top: 50px;">
+              <div class="col-1"></div>
+              <div class="col-2">
+                <h4 class="txtNav">Ricky Garcia</h4> 
+                <img src="../images/arts/ricky1.jpg" class="rounded-circle img-fluid" width="150px">
+              </div>
+              <div class="col-3" style="padding-top: 60px;">
+                <p class="txtNav">
+                  <b>Nombres: </b>Ricky Garcia</br>  
+                  <b>Mail: </b>ragarcia12@espe.edu.ec</br> 
+                  <b>Teléfono: </b>09872341537</br>
+                  <b>Carrera: </b>ITIN 
+                </p>
+              </div>
+
+              <div class="col-2">
+                <h4 class="txtNav">Gisselle Loachamin</h4> 
+                <img src="../images/arts/giss1.jpg" class="rounded-circle img-fluid" width="150px">
+              </div>
+                      
+              <div class="col-3" style="padding-top: 60px;">
+                <p class="txtNav">
+                  <b>Nombres: </b> Gisselle Loachamin</br>  
+                  <b>mail: </b> geloachamin1@espe.edu.ec</br> 
+                  <b>teléfono: </b> 0987251030</br>
+                  <b>Carrera: </b>ITIN  
+                </p> 
+              </div>
+                      
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-12 text-center">
+                  <i class="bi bi-facebook" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                  <i class="bi bi-twitter" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                  <i class="bi bi-youtube" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                  <i class="bi bi-whatsapp" style="font-size: 30px; color: #fff; margin-right: 20px;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </section>
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////
+                                   FOOTER  
+        ///////////////////////////////////////////////////////////////////////////////////////////////-->
+        <footer class="footer">
+          <!-- START THE SOCIAL MEDIA CONTENT  -->
+          <div class="footer-sm" style="background-color: #212121;">
+            <div class="container">
+              <div class="row py-4 text-center text-white">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                  Síguenos en las redes sociales
+                </div>
+                <div class="col-lg-7 col-md-6">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- START THE CONTENT FOR THE CAMPANY INFO -->
+          <div class="container mt-5">
+            <div class="row text-white justify-content-center mt-3 pb-3">
+              <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+                <h5 class="text-capitalize fw-bold">Universidad de las Fuerzas Armadas ESPE</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <p class="lh-lg">
+                  APLICACION DE TECNOLOGIAS WEB ---- NRC: 8496
+                </p>
+              </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+                    <h5 class="text-capitalize fw-bold">Contenido</h5>
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#introduccion">Introducción</a></li>
+                        <li><a href="#metodos">Metódos</a></li>
+                        <li><a href="#componentes">Componentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto" style="padding-top:35px">
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#elementos">Elementos</a></li>
+                        <li><a href="#html">HTML</a></li>
+                        <li><a href="#css">CSS</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto" style="padding-top:35px">
+                    <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                    <ul class="list-inline campany-list">
+                        <li><a href="#formulario">Formularios</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- BACK TO TOP BUTTON  -->
+        <a href="#home" class="shadow btn-primary rounded-circle back-to-top content-botton">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <script src="../assets/vendors/js/glightbox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+              const lightbox = GLightbox({
+                'touchNavigation': true,
+                'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+                'type': 'video',
+                'source': 'youtube', //vimeo, youtube or local
+                'width': 900,
+                'autoPlayVideos': 'true',
+        });  
+        </script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.sr = ScrollReveal();
+            sr.reveal('.content-left', {
+                duration: 2000,
+                origin: 'left',
+                distance: '300px'
+            });
+            sr.reveal('.content-right', {
+                duration: 2000,
+                origin: 'right',
+                distance: '300px'
+            });
+            sr.reveal('.content-botton', {
+                duration: 2000,
+                origin: 'bottom',
+                delay: 200
+            });
+        </script>
+    </body>
+</html>
